@@ -1,0 +1,42 @@
+.data
+.equ DIR_BASE_TIMER, 0x3F003000
+.align 2
+TIMERDIR: .space 4
+
+.text
+.globl ini_Timer
+.globl timer_Act
+
+ini_Timer:
+        stmdb sp!, {lr}
+
+	@determina la direccion logica del dispositivo System Timer. El procedimiento ha de ser igual al de la practica anterior.No recibe parametros ni devuelve resultados.
+	mov r0, #13
+	ldr r1, =DIR_BASE_TIMER
+	mov r2, #0x100
+	swi 0x68
+
+	@guardamos la direccion en variable global
+	ldr r4, =TIMERDIR
+	str r3, [r4]
+
+        ldmia sp!, {pc}
+
+
+timer_Act:
+
+	stmdb sp!,{r4-r6, lr}
+	@se encarga de leer el valor del contador del timer. Devuelve en dos registros los 32 bits menos significativos y en el otro el resto.
+	ldr r4, =TIMERDIR
+	ldr r4, [r4]
+
+	@modo supervisirr
+	swi 0x16
+	ldr r5, [r4, #0x04] @parte baja
+	ldr r6, [r4, #0x08] @parte alta
+	swi 0x7C
+
+	mov r0, r5
+	mov r1, r6
+
+	ldmia sp!, {r4-r6, pc}

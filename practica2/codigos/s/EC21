@@ -1,0 +1,102 @@
+.data
+.equ TAM, 4
+LEDS: .word 9,10,11,17,22,27
+BOTONES: .word 2,3
+.align 2
+.text
+.globl _start
+.extern driver_gpio
+_start:
+
+
+        @programamos los leds como salida
+        ldr r4, =LEDS @puntero a los terminales led
+        mov r5, #0 @contador i_LEDS = 0
+        mov r10, #0 @contador
+
+B_LEDS:   cmp r5, #6 @numero de leds
+        bge F_LEDS
+        ldr r0, [r4] @numero de gpio
+        mov r1, #1 @salida
+        bl prog_gpio
+
+        add r5,r5, #1 @aumentamos contador
+        add r4,r4, #TAM @aumentamos puntero
+        b B_LEDS
+
+F_LEDS:
+        @programamos los botones como entrada
+        mov r0, #2 @primer boton
+        mov r1, #0 @entrada
+        bl prog_gpio
+
+        mov r0, #3 @segundo boton
+        mov r1, #0 @entrada
+        bl prog_gpio
+
+        @encendemos led verde mas a la derecha
+        ldr r4, =LEDS
+        mov r3, #5
+        mov r2, #TAM
+        mul r3, r2, r3
+        add r4, r4, r3
+        ldr r0, [r4]
+        @ultima posicion del array
+        mov r1, #1 @encendemos
+        bl valor_gpio
+
+        mov r10, #0 @contador
+
+WHILE:  cmp r10, #20
+        bge F_WHILE
+        @leemos los botones:
+
+        mov r0, #2
+        bl leeValor_gpio
+        cmp r0, #0
+        bne BOTON_DERECHO
+        @si estamos en el led de mas a la izquierda, se queda quieto. Si no avanza
+        ldr r5, [r4]
+        cmp r5, #9 @led extremo izquierda
+        @actualizamos contador
+        beq WHILE
+        @si estamos en cualquier otro led, apagamos el actual y encendemos el izquierdo.
+        ldr r0, [r4]
+        mov r1, #0 @apagamos
+        bl valor_gpio
+        sub r4,r4, #TAM
+        ldr r0, [r4]
+        mov r1, #1 @encendemos
+        bl valor_gpio
+        @actualizamos contador
+        add r10, r10, #1
+        b WHILE
+
+
+BOTON_DERECHO:
+        mov r0, #3 @segundo boton
+        bl leeValor_gpio
+        cmp r0, #0
+        bne WHILE
+
+        ldr r5, [r4]
+        cmp r5, #27 @led extremo izquierda
+        @actualizamos contador
+        beq WHILE
+        @si estamos en cualquier otro led, apagamos el actual y encendemos el derecho.
+        ldr r0, [r4]
+        mov r1, #0 @apagamos
+        bl valor_gpio
+        add r4,r4, #TAM
+        ldr r0, [r4]
+        mov r1, #1 @encendemos
+        bl valor_gpio
+        @actualizamos contador
+        add r10, r10, #1
+        b WHILE
+
+F_WHILE:
+        ldr r0, [r4]
+        mov r1, #0
+        bl valor_gpio
+        swi 0x11

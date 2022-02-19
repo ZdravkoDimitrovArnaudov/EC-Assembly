@@ -1,0 +1,67 @@
+.data
+intro: .asciz "Escoja una de las siguientes opciones(1/2):\n"
+medir: .asciz "1.Medir\n"
+salir: .asciz "2.Salir\n"
+espacio: .asciz "\n"
+error: .asciz "No se ha podido leer la distancia correctamente"
+fallo_intento: .asciz "Opcion no valida. Por favor, intentelo de nuevo."
+.align 2
+.text
+.extern read_integer
+.extern print_integer
+.extern d_distancia1
+.globl _start
+_start:
+
+       @mostramos la cabecera del programa
+       ldr  r0, =intro
+       swi 0x02
+
+       ldr  r0, =medir
+       swi 0x02
+
+       ldr  r0, = salir
+       swi 0x02
+
+       @recogemos la eleccion del usuario, Si no se introduce 1 o 2, se pide al usuario que inserte de nuevo
+       bl read_integer
+
+WHILE:
+
+       cmp r0, #1
+       beq MIDE
+       cmp r0, #2
+       beq FIN
+
+       ldr r0, =espacio
+       swi 0x02
+
+       ldr r0, =fallo_intento
+       swi 0x02
+
+       bl read_integer
+       b WHILE
+
+MIDE:
+       ldr r0, = espacio @salto de linea para imprimir el resultado
+       swi 0x02
+
+       bl Ini_dist @inicializamos los terminales
+       bl Mide_dist @leemos distancia
+
+       cmp r1, #1
+       bne DISTANCIA
+
+       ldr  r0, =error
+       swi 0x02
+       b FIN
+
+
+DISTANCIA:
+
+       @devuelta la distancia aproximada en milimetros
+       bl print_integer
+       b FIN
+
+FIN:   swi 0x11
+

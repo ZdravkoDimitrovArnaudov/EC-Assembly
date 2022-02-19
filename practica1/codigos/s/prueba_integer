@@ -1,0 +1,12 @@
+.data
+
+.text
+.globl _start
+.extern read_integer
+_start:
+
+@comprobamos el funcionamiento de read_integer.
+bl read_integer
+
+
+swi 0x11

@@ -1,0 +1,82 @@
+.data
+.equ c_div10 , 0x19999999
+.equ NULO, 0x00
+.equ NUMERO, 0x30
+
+
+CADENA: .space 12 @espacio limite de cadena para albergar numero, signo y nulo.
+.text
+.globl print_integer
+.extern print_integer
+print_integer:
+
+              stmdb sp!, {r4,r5,lr}
+              @ro = numero a convertir en cadena
+              ldr r4, =CADENA
+              mov r2, #NULO
+              mov r1, #0
+
+              add r4,r4, #12 @apuntamos al ultimo byte de la cadena.
+              strb r2, [r4] @caracter nulo para marcar el final de cadena.
+              sub  r4,r4,#1 @retrocedemos el puntero cada vez que insertamos
+
+
+              @aplicamos mascara
+              mov r5, #0 @booleano = false numero negativo
+              and r1, r0, #0x80000000
+              cmp r1, #0x80000000
+              addeq r5,r5, #1 @booleano = true si numero negativo
+              subeq r0, r2, r0 @en tal caso, tratarlo como negativo y despues aplicar el signo negativo.
+
+
+bucle:
+              cmp r0, #10
+              blt fin_bucle
+              bl div_10
+              add r1, r1, #NUMERO @convertimos resto en caracter
+              strb r1, [r4] @escribimos en cadema decrementadamente
+              @actualizamos
+              sub r4, r4, #1
+              b bucle
+
+fin_bucle:
+              add r0,r0, #NUMERO
+              strb r0, [r4] @digito ultimo o unico
+              cmp r5, #1    @si booleano = true numero negativo
+              beq negativo
+              b fin_cadena
+
+
+
+negativo:     sub r4, r4, #1 @decrementamos puntero
+              mov r1, #'-' @cargamos signo negativo
+              strb r1 , [r4]
+              b fin_cadena
+
+
+
+
+
+fin_cadena:
+              mov r0, r4 @cambiamos de registro para poder proyectar cadena.
+              swi 0x02
+
+              ldmia sp!,{r4,r5, pc}
+
+
+
+
+div_10:
+              ldr r1, =c_div10
+              umull r1,r2,r0,r1
+              mov r1, #10
+              umull r1, r3, r2, r1
+              sub r1, r0, r1
+              cmp r1, #10
+              blt fin_div
+              sub r1, r1, #10
+              add r2, r2, #1
+
+fin_div:
+              mov r0, r2
+              mov pc, lr

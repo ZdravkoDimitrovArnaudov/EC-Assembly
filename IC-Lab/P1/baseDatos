@@ -1,0 +1,6646 @@
+.data
+.equ TITULO, 
+.equ ESTRENO, 
+.equ NOTA_MEDIA, 
+.equ NUM_VOTOS, 
+.equ N_PELICULAS, 
+.equ L_PELICULA, 
+
+.align 2
+PELICULAS:
+.asciz "10 jours sans maman"
+.space 41
+.align 1
+.hword 2020
+.float 5.5
+.word 37
+.asciz "10 Things We Should Do Before We Break Up"
+.space 19
+.align 1
+.hword 2020
+.float 5.3
+.word 63
+.asciz "18 regali"
+.space 51
+.align 1
+.hword 2020
+.float 6
+.word 236
+.asciz "18% Grey"
+.space 52
+.align 1
+.hword 2020
+.float 5.8
+.word 85
+.asciz "2 Graves in the Desert"
+.space 38
+.align 1
+.hword 2020
+.float 3
+.word 31
+.asciz "24 Little Hours"
+.space 45
+.align 1
+.hword 2020
+.float 5.3
+.word 383
+.asciz "3 Monkeys"
+.space 51
+.align 1
+.hword 2020
+.float 6.6
+.word 33
+.asciz "30 Chua Phai Tet"
+.space 44
+.align 1
+.hword 2020
+.float 2.7
+.word 11
+.asciz "365 dni"
+.space 53
+.align 1
+.hword 2020
+.float 3
+.word 320
+.asciz "3rd Class"
+.space 51
+.align 1
+.hword 2020
+.float 9
+.word 427
+.asciz "4 Mantan"
+.space 52
+.align 1
+.hword 2020
+.float 5.5
+.word 6
+.asciz "8th Round Pick"
+.space 46
+.align 1
+.hword 2020
+.float 8
+.word 5
+.asciz "A Ballad for the White Cow"
+.space 34
+.align 1
+.hword 2020
+.float 6.3
+.word 7
+.asciz "A Daughter's Ordeal"
+.space 41
+.align 1
+.hword 2020
+.float 5
+.word 50
+.asciz "A Day & A Night"
+.space 45
+.align 1
+.hword 2020
+.float 6.6
+.word 14
+.asciz "A Divisão"
+.space 51
+.align 1
+.hword 2020
+.float 8
+.word 5
+.asciz "A Fall from Grace"
+.space 43
+.align 1
+.hword 2020
+.float 5.8
+.word 6897
+.asciz "A feltaláló"
+.space 49
+.align 1
+.hword 2020
+.float 7.6
+.word 38
+.asciz "A Game Called Relationship"
+.space 34
+.align 1
+.hword 2020
+.float 9.6
+.word 51
+.asciz "À L'abordage"
+.space 48
+.align 1
+.hword 2020
+.float 7.9
+.word 20
+.asciz "A Metamorfose dos Pássaros"
+.space 34
+.align 1
+.hword 2020
+.float 7.2
+.word 10
+.asciz "A Private Dancer in Mom's Kitchen!"
+.space 26
+.align 1
+.hword 2020
+.float 8.7
+.word 9
+.asciz "A Thousand Cuts"
+.space 45
+.align 1
+.hword 2020
+.float 5.1
+.word 22
+.asciz "Abadan 1160"
+.space 49
+.align 1
+.hword 2020
+.float 6.6
+.word 5
+.asciz "Abbi Fede"
+.space 51
+.align 1
+.hword 2020
+.float 6.4
+.word 7
+.asciz "Acasa, My Home"
+.space 46
+.align 1
+.hword 2020
+.float 8.1
+.word 15
+.asciz "Açela"
+.space 55
+.align 1
+.hword 2020
+.float 6.2
+.word 157
+.asciz "Aci Kiraz (the Hardest Thing)"
+.space 31
+.align 1
+.hword 2020
+.float 5
+.word 23
+.asciz "Adú"
+.space 57
+.align 1
+.hword 2020
+.float 6.6
+.word 159
+.asciz "Adventures of a Mathematician"
+.space 31
+.align 1
+.hword 2020
+.float 7.4
+.word 7
+.asciz "Adverse"
+.space 53
+.align 1
+.hword 2020
+.float 8.2
+.word 223
+.asciz "Affraa Taffri"
+.space 47
+.align 1
+.hword 2020
+.float 8.3
+.word 7
+.asciz "Agent Jade Black"
+.space 44
+.align 1
+.hword 2020
+.float 3
+.word 64
+.asciz "Agir Romantik"
+.space 47
+.align 1
+.hword 2020
+.float 8.2
+.word 338
+.asciz "AI Houkai"
+.space 51
+.align 1
+.hword 2020
+.float 5.2
+.word 17
+.asciz "Air Conditioner"
+.space 45
+.align 1
+.hword 2020
+.float 5.9
+.word 15
+.asciz "Aiyai: Wrathful Soul"
+.space 40
+.align 1
+.hword 2020
+.float 8
+.word 7
+.asciz "Akhir Kisah Cinta Si Doel"
+.space 35
+.align 1
+.hword 2020
+.float 6.2
+.word 44
+.asciz "Al Mallu"
+.space 52
+.align 1
+.hword 2020
+.float 7.2
+.word 9
+.asciz "Ala Vaikunthapurramuloo"
+.space 37
+.align 1
+.hword 2020
+.float 7.3
+.word 3765
+.asciz "Alien Outbreak"
+.space 46
+.align 1
+.hword 2020
+.float 3.6
+.word 275
+.asciz "All the Bright Places"
+.space 39
+.align 1
+.hword 2020
+.float 6.5
+.word 4479
+.asciz "All's Well End's Well 2020"
+.space 34
+.align 1
+.hword 2020
+.float 5.5
+.word 11
+.asciz "Always Amber"
+.space 48
+.align 1
+.hword 2020
+.float 7.4
+.word 16
+.asciz "AmarJyoti AkkaMahadevi"
+.space 38
+.align 1
+.hword 2020
+.float 9.2
+.word 12
+.asciz "Amudhan aka Sinamkol"
+.space 40
+.align 1
+.hword 2020
+.float 9.2
+.word 13
+.asciz "Anak Garuda"
+.space 49
+.align 1
+.hword 2020
+.float 9.4
+.word 24
+.asciz "André Rieu: 70 Years Young"
+.space 34
+.align 1
+.hword 2020
+.float 7
+.word 5
+.asciz "Angels Fallen"
+.space 47
+.align 1
+.hword 2020
+.float 6
+.word 843
+.asciz "Anjaam Pathiraa"
+.space 45
+.align 1
+.hword 2020
+.float 8.3
+.word 1168
+.asciz "Anunciaron tormenta"
+.space 41
+.align 1
+.hword 2020
+.float 4.7
+.word 6
+.asciz "Apollyon"
+.space 52
+.align 1
+.hword 2020
+.float 6.1
+.word 21
+.asciz "Are We Lost Forever"
+.space 41
+.align 1
+.hword 2020
+.float 7.2
+.word 12
+.asciz "Ask Tesadüfleri Sever 2"
+.space 37
+.align 1
+.hword 2020
+.float 7.2
+.word 261
+.asciz "Assassin 33 A.D."
+.space 44
+.align 1
+.hword 2020
+.float 9.1
+.word 55
+.asciz "Asur"
+.space 56
+.align 1
+.hword 2020
+.float 8.1
+.word 103
+.asciz "Aswathama"
+.space 51
+.align 1
+.hword 2020
+.float 7.5
+.word 159
+.asciz "Atabai"
+.space 54
+.align 1
+.hword 2020
+.float 7.1
+.word 12
+.asciz "Automotive"
+.space 50
+.align 1
+.hword 2020
+.float 8.4
+.word 9
+.asciz "Ayyappanum Koshiyum"
+.space 41
+.align 1
+.hword 2020
+.float 8
+.word 499
+.asciz "Baba Parasi"
+.space 49
+.align 1
+.hword 2020
+.float 4.6
+.word 587
+.asciz "Bad Boys for Life"
+.space 43
+.align 1
+.hword 2020
+.float 7.2
+.word 42905
+.asciz "Bad Hair"
+.space 52
+.align 1
+.hword 2020
+.float 6.2
+.word 45
+.asciz "Baghdad Thief"
+.space 47
+.align 1
+.hword 2020
+.float 5.5
+.word 95
+.asciz "Ballad of a Righteous Merchant"
+.space 30
+.align 1
+.hword 2020
+.float 5
+.word 5
+.asciz "Bayi Toplantisi"
+.space 45
+.align 1
+.hword 2020
+.float 5.1
+.word 295
+.asciz "Be Water"
+.space 52
+.align 1
+.hword 2020
+.float 8.4
+.word 13
+.asciz "Beast Beast"
+.space 49
+.align 1
+.hword 2020
+.float 8.5
+.word 35
+.asciz "Beasts That Cling to the Straw"
+.space 30
+.align 1
+.hword 2020
+.float 7.6
+.word 53
+.asciz "Bendita Rebeldía"
+.space 44
+.align 1
+.hword 2020
+.float 6.6
+.word 27
+.asciz "Berlin Alexanderplatz"
+.space 39
+.align 1
+.hword 2020
+.float 6.9
+.word 101
+.asciz "Bhangra Paa Le"
+.space 46
+.align 1
+.hword 2020
+.float 6.6
+.word 49
+.asciz "Bheeshma"
+.space 52
+.align 1
+.hword 2020
+.float 7.3
+.word 382
+.asciz "Bhoot: Part One - The Haunted Ship"
+.space 26
+.align 1
+.hword 2020
+.float 6.3
+.word 1285
+.asciz "Bicchugatthi Chapter 1"
+.space 38
+.align 1
+.hword 2020
+.float 7.6
+.word 8
+.asciz "Bikini Valley Car Wash"
+.space 38
+.align 1
+.hword 2020
+.float 6.6
+.word 17
+.asciz "BIR"
+.space 57
+.align 1
+.hword 2020
+.float 6.3
+.word 61
+.asciz "Biz Böyleyiz"
+.space 48
+.align 1
+.hword 2020
+.float 6.6
+.word 673
+.asciz "Black Bear"
+.space 50
+.align 1
+.hword 2020
+.float 7.6
+.word 42
+.asciz "Black Wall Street Burning"
+.space 35
+.align 1
+.hword 2020
+.float 7.6
+.word 7
+.asciz "Blanco de Verano"
+.space 44
+.align 1
+.hword 2020
+.float 6.8
+.word 6
+.asciz "Blast Beat"
+.space 50
+.align 1
+.hword 2020
+.float 6.8
+.word 19
+.asciz "Blind Eyes Opened"
+.space 43
+.align 1
+.hword 2020
+.float 6.7
+.word 29
+.asciz "Block Z"
+.space 53
+.align 1
+.hword 2020
+.float 6.4
+.word 33
+.asciz "Blood Widow"
+.space 49
+.align 1
+.hword 2020
+.float 3.8
+.word 82
+.asciz "Bloodhound"
+.space 50
+.align 1
+.hword 2020
+.float 2.8
+.word 78
+.asciz "Bloodshot"
+.space 51
+.align 1
+.hword 2020
+.float 5.9
+.word 263
+.asciz "Bloody Nose, Empty Pockets"
+.space 34
+.align 1
+.hword 2020
+.float 7.5
+.word 37
+.asciz "Bone Breaker"
+.space 48
+.align 1
+.hword 2020
+.float 2.9
+.word 55
+.asciz "Bone Marrow"
+.space 49
+.align 1
+.hword 2020
+.float 6.1
+.word 10
+.asciz "Bonus"
+.space 55
+.align 1
+.hword 2020
+.float 9.6
+.word 5
+.asciz "Borunbabur Bondhu"
+.space 43
+.align 1
+.hword 2020
+.float 8.8
+.word 6
+.asciz "Boys State"
+.space 50
+.align 1
+.hword 2020
+.float 8.9
+.word 23
+.asciz "Bozkir"
+.space 54
+.align 1
+.hword 2020
+.float 7.1
+.word 10
+.asciz "Brahms: The Boy II"
+.space 42
+.align 1
+.hword 2020
+.float 4.3
+.word 1648
+.asciz "Brave are the Fallen"
+.space 40
+.align 1
+.hword 2020
+.float 8
+.word 5
+.asciz "Breaking Surface"
+.space 44
+.align 1
+.hword 2020
+.float 6.8
+.word 59
+.asciz "Broken Truth"
+.space 48
+.align 1
+.hword 2020
+.float 7.8
+.word 16
+.asciz "Brot"
+.space 56
+.align 1
+.hword 2020
+.float 6.7
+.word 6
+.asciz "Bulletproof 2"
+.space 47
+.align 1
+.hword 2020
+.float 3.4
+.word 223
+.asciz "Bunker"
+.space 54
+.align 1
+.hword 2020
+.float 7.8
+.word 8
+.asciz "BUOYANCY"
+.space 52
+.align 1
+.hword 2020
+.float 8
+.word 26
+.asciz "Butterfly Swimming"
+.space 42
+.align 1
+.hword 2020
+.float 7.1
+.word 25
+.asciz "Cabarete"
+.space 52
+.align 1
+.hword 2020
+.float 9.4
+.word 5
+.asciz "Camino a Roma"
+.space 47
+.align 1
+.hword 2020
+.float 7.9
+.word 198
+.asciz "Camp Blood 8: Revelations"
+.space 35
+.align 1
+.hword 2020
+.float 4.3
+.word 6
+.asciz "Canceling"
+.space 51
+.align 1
+.hword 2020
+.float 9.4
+.word 36
+.asciz "Cannabis v.s Cancer"
+.space 41
+.align 1
+.hword 2020
+.float 7.6
+.word 8
+.asciz "Capo di Famiglia: Part II"
+.space 35
+.align 1
+.hword 2020
+.float 10
+.word 12
+.asciz "Captured"
+.space 52
+.align 1
+.hword 2020
+.float 5.7
+.word 28
+.asciz "CatVideoFest 2020"
+.space 43
+.align 1
+.hword 2020
+.float 7.8
+.word 5
+.asciz "Catwalk: From Glada Hudik to New York"
+.space 23
+.align 1
+.hword 2020
+.float 8.7
+.word 40
+.asciz "Chained (Agora II)"
+.space 42
+.align 1
+.hword 2020
+.float 9
+.word 19
+.asciz "Charlatan"
+.space 51
+.align 1
+.hword 2020
+.float 6.8
+.word 52
+.asciz "Charter"
+.space 53
+.align 1
+.hword 2020
+.float 7.8
+.word 38
+.asciz "60 Minutes to Kill"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Cheema Prema Madhyalo Bhama"
+.space 33
+.align 1
+.hword 2020
+.float 8.8
+.word 5
+.asciz "8 Days with Hopper"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "90 Minutes TV Show"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Chhapaak"
+.space 52
+.align 1
+.hword 2020
+.float 4.7
+.word 21840
+.asciz "Chlap na strídacku"
+.space 42
+.align 1
+.hword 2020
+.float 4.9
+.word 16
+.asciz "A Dream of Red Mansions"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Choosi Choodangaane"
+.space 41
+.align 1
+.hword 2020
+.float 7.3
+.word 12
+.asciz "A Figgly Christmas"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Ciao Italia"
+.space 49
+.align 1
+.hword 2020
+.float 1.8
+.word 13
+.asciz "Cindy La Regia"
+.space 46
+.align 1
+.hword 2020
+.float 6
+.word 557
+.asciz "Cinema Pameer"
+.space 47
+.align 1
+.hword 2020
+.float 8.4
+.word 7
+.asciz "Cinema Shahre Gheseh"
+.space 40
+.align 1
+.hword 2020
+.float 4.4
+.word 9
+.asciz "A Killer Next Door"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "A Long Hard Streak"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "A Manchester Story"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Clown Fear"
+.space 50
+.align 1
+.hword 2020
+.float 3.4
+.word 64
+.asciz "Coded Bias"
+.space 50
+.align 1
+.hword 2020
+.float 7.6
+.word 12
+.asciz "Colombia in My Arms"
+.space 41
+.align 1
+.hword 2020
+.float 8.3
+.word 7
+.asciz "Connor McDavid: Whatever It Takes"
+.space 27
+.align 1
+.hword 2020
+.float 9.6
+.word 7
+.asciz "A Mulher sem Corpo"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Copper Bill"
+.space 49
+.align 1
+.hword 2020
+.float 8.7
+.word 13
+.asciz "Corazón ardiente"
+.space 44
+.align 1
+.hword 2020
+.float 8.7
+.word 6
+.asciz "Cosas de Hombres"
+.space 44
+.align 1
+.hword 2020
+.float 2.3
+.word 48
+.asciz "Couch Connections"
+.space 43
+.align 1
+.hword 2020
+.float 9.9
+.word 7
+.asciz "Created Equal: Clarence Thomas in His Own Words"
+.space 13
+.align 1
+.hword 2020
+.float 8.1
+.word 51
+.asciz "Crip Camp"
+.space 51
+.align 1
+.hword 2020
+.float 8.6
+.word 22
+.asciz "Curveball"
+.space 51
+.align 1
+.hword 2020
+.float 7.4
+.word 29
+.asciz "D. Wade Life Unexpected"
+.space 37
+.align 1
+.hword 2020
+.float 7.1
+.word 9
+.asciz "Dagaalty"
+.space 52
+.align 1
+.hword 2020
+.float 5.3
+.word 26
+.asciz "Damp Season"
+.space 49
+.align 1
+.hword 2020
+.float 6
+.word 6
+.asciz "Darbar"
+.space 54
+.align 1
+.hword 2020
+.float 6.5
+.word 3129
+.asciz "Darcy"
+.space 55
+.align 1
+.hword 2020
+.float 5.1
+.word 97
+.asciz "Das geheime Leben der Bäume"
+.space 33
+.align 1
+.hword 2020
+.float 6.5
+.word 77
+.asciz "DAU. Degeneratsiya"
+.space 42
+.align 1
+.hword 2020
+.float 8.2
+.word 25
+.asciz "DAU. Natasha"
+.space 48
+.align 1
+.hword 2020
+.float 6.8
+.word 86
+.asciz "Days of Violence"
+.space 44
+.align 1
+.hword 2020
+.float 9.5
+.word 10
+.asciz "De"
+.space 58
+.align 1
+.hword 2020
+.float 10
+.word 6
+.asciz "De Beentjes van Sint Hildegard"
+.space 30
+.align 1
+.hword 2020
+.float 7.9
+.word 374
+.asciz "De forbandede år"
+.space 44
+.align 1
+.hword 2020
+.float 6.7
+.word 250
+.asciz "De Gaulle"
+.space 51
+.align 1
+.hword 2020
+.float 6.6
+.word 22
+.asciz "De Grote Slijmfilm"
+.space 42
+.align 1
+.hword 2020
+.float 5
+.word 34
+.asciz "Death of a Fool"
+.space 45
+.align 1
+.hword 2020
+.float 9.6
+.word 23
+.asciz "Death of Nintendo"
+.space 43
+.align 1
+.hword 2020
+.float 6.3
+.word 12
+.asciz "Deep Web"
+.space 52
+.align 1
+.hword 2020
+.float 7.3
+.word 7
+.asciz "Deported"
+.space 52
+.align 1
+.hword 2020
+.float 3.7
+.word 120
+.asciz "Dhurala"
+.space 53
+.align 1
+.hword 2020
+.float 8.6
+.word 83
+.asciz "Di Ren Jie Tan An"
+.space 43
+.align 1
+.hword 2020
+.float 5.4
+.word 10
+.asciz "Dia (Kannada)"
+.space 47
+.align 1
+.hword 2020
+.float 9.5
+.word 77
+.asciz "Dick Johnson Is Dead"
+.space 40
+.align 1
+.hword 2020
+.float 8.9
+.word 8
+.asciz "Die Dohnal"
+.space 50
+.align 1
+.hword 2020
+.float 7.9
+.word 10
+.asciz "Die Hochzeit"
+.space 48
+.align 1
+.hword 2020
+.float 2.6
+.word 218
+.asciz "Die letzte Stadt"
+.space 44
+.align 1
+.hword 2020
+.float 5.2
+.word 9
+.asciz "Die Papsttochter - Wir kommen im Namen des Herrn"
+.space 12
+.align 1
+.hword 2020
+.float 3
+.word 10
+.asciz "Die Wolf-Gäng"
+.space 47
+.align 1
+.hword 2020
+.float 6.1
+.word 28
+.asciz "Digimon Adventure: Last Evolution Kizuna"
+.space 20
+.align 1
+.hword 2020
+.float 8.4
+.word 15
+.asciz "Dignitate"
+.space 51
+.align 1
+.hword 2020
+.float 6.4
+.word 11
+.asciz "Dinner in America"
+.space 43
+.align 1
+.hword 2020
+.float 8.3
+.word 64
+.asciz "Disclosure: Trans Lives on Screen"
+.space 27
+.align 1
+.hword 2020
+.float 8.4
+.word 8
+.asciz "Disco Raja"
+.space 50
+.align 1
+.hword 2020
+.float 7.2
+.word 475
+.asciz "Doi Mat Am Duong"
+.space 44
+.align 1
+.hword 2020
+.float 5.6
+.word 11
+.asciz "Dolittle"
+.space 52
+.align 1
+.hword 2020
+.float 5.5
+.word 17699
+.asciz "Domangchin yeoja"
+.space 44
+.align 1
+.hword 2020
+.float 6.9
+.word 115
+.asciz "Doordarshan"
+.space 49
+.align 1
+.hword 2020
+.float 5.3
+.word 15
+.asciz "Downhill"
+.space 52
+.align 1
+.hword 2020
+.float 4.9
+.word 1492
+.asciz "Dragonheart Vengeance"
+.space 39
+.align 1
+.hword 2020
+.float 5
+.word 511
+.asciz "Drama Girl"
+.space 50
+.align 1
+.hword 2020
+.float 6.5
+.word 20
+.asciz "Draupathi"
+.space 51
+.align 1
+.hword 2020
+.float 5.9
+.word 162
+.asciz "Dream Horse"
+.space 49
+.align 1
+.hword 2020
+.float 7.1
+.word 34
+.asciz "Dream Round"
+.space 49
+.align 1
+.hword 2020
+.float 6.8
+.word 15
+.asciz "Drømmebyggerne"
+.space 46
+.align 1
+.hword 2020
+.float 7.6
+.word 35
+.asciz "Ducobu 3"
+.space 52
+.align 1
+.hword 2020
+.float 4.5
+.word 30
+.asciz "Duo guan"
+.space 52
+.align 1
+.hword 2020
+.float 6.8
+.word 5
+.asciz "Dwitiyo Purush"
+.space 46
+.align 1
+.hword 2020
+.float 6.7
+.word 305
+.asciz "Effacer l'historique"
+.space 40
+.align 1
+.hword 2020
+.float 6.7
+.word 100
+.asciz "Ek Sainik - The Tale of a warrior"
+.space 27
+.align 1
+.hword 2020
+.float 8.9
+.word 12
+.asciz "EKS"
+.space 57
+.align 1
+.hword 2020
+.float 8.5
+.word 41
+.asciz "El robo del siglo"
+.space 43
+.align 1
+.hword 2020
+.float 7.4
+.word 760
+.asciz "Elleville Elfrid"
+.space 44
+.align 1
+.hword 2020
+.float 6.1
+.word 26
+.asciz "Eltilerin Savasi"
+.space 44
+.align 1
+.hword 2020
+.float 6.2
+.word 560
+.asciz "Emerald Run"
+.space 49
+.align 1
+.hword 2020
+.float 4.5
+.word 60
+.asciz "Emerson Heights"
+.space 45
+.align 1
+.hword 2020
+.float 6.5
+.word 11
+.asciz "Emma."
+.space 55
+.align 1
+.hword 2020
+.float 6.9
+.word 2699
+.asciz "En helt almindelig familie"
+.space 34
+.align 1
+.hword 2020
+.float 7.6
+.word 93
+.asciz "Enkel für Anfänger"
+.space 42
+.align 1
+.hword 2020
+.float 7.1
+.word 74
+.asciz "Entha Manchivaadavuraa"
+.space 38
+.align 1
+.hword 2020
+.float 5.5
+.word 168
+.asciz "Entre perro y lobo"
+.space 42
+.align 1
+.hword 2020
+.float 6.4
+.word 5
+.asciz "Epicentro"
+.space 51
+.align 1
+.hword 2020
+.float 6
+.word 13
+.asciz "Escaping Fed"
+.space 48
+.align 1
+.hword 2020
+.float 6.6
+.word 5
+.asciz "Every Week Has A Friday"
+.space 37
+.align 1
+.hword 2020
+.float 8.4
+.word 45
+.asciz "Eyimofe"
+.space 53
+.align 1
+.hword 2020
+.float 7.6
+.word 16
+.asciz "A Soldier's Secret"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "A Spark in Nothing"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "A Strippers Prayer"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "A Thread of Deceit: The Hart Family Tragedy"
+.space 17
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Fantasy Island"
+.space 46
+.align 1
+.hword 2020
+.float 4.6
+.word 4965
+.asciz "Farewell Amor"
+.space 47
+.align 1
+.hword 2020
+.float 8.5
+.word 23
+.asciz "Aathavnichi Savali"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Above The Hospital"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Favolacce"
+.space 51
+.align 1
+.hword 2020
+.float 5.5
+.word 152
+.asciz "Acquitted by Faith"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Feels Good Man"
+.space 46
+.align 1
+.hword 2020
+.float 8.6
+.word 24
+.asciz "Fight Lah! Kopitiam"
+.space 41
+.align 1
+.hword 2020
+.float 6.4
+.word 8
+.asciz "Figli"
+.space 55
+.align 1
+.hword 2020
+.float 5.8
+.word 208
+.asciz "Adrushyam Odia Thriller"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Filles de joie"
+.space 46
+.align 1
+.hword 2020
+.float 7.1
+.word 23
+.asciz "After the Crossing"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "After the Gunflint"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Ahilya: Zunj Ekaki"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "First Lady"
+.space 50
+.align 1
+.hword 2020
+.float 4.8
+.word 53
+.asciz "Fjols til Fjells"
+.space 44
+.align 1
+.hword 2020
+.float 4.6
+.word 40
+.asciz "Alex in Three Ways"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Flint"
+.space 55
+.align 1
+.hword 2020
+.float 6
+.word 6
+.asciz "Aliens and Dragons"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Flukten over grensen"
+.space 40
+.align 1
+.hword 2020
+.float 7.4
+.word 25
+.asciz "All Hallows' Steve"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Alle Reden Übers Wetter"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Alone in the Night"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Alone with Bigfoot"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Forensic"
+.space 52
+.align 1
+.hword 2020
+.float 7.1
+.word 181
+.asciz "Four Good Days"
+.space 46
+.align 1
+.hword 2020
+.float 7
+.word 46
+.asciz "American Terrorist"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Fred Jüssi. Olemise ilu"
+.space 37
+.align 1
+.hword 2020
+.float 8.6
+.word 55
+.asciz "Free Burma Rangers"
+.space 42
+.align 1
+.hword 2020
+.float 9.8
+.word 23
+.asciz "Frem"
+.space 56
+.align 1
+.hword 2020
+.float 5.4
+.word 14
+.asciz "An American Pickle"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "An Awkward Balance"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "An Elephant in the Room"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "An Extraordinary Affair"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "An Ideal Candidate"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "An Ordinary People"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "An Unlikely Fandom"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "From the Ground"
+.space 45
+.align 1
+.hword 2020
+.float 8
+.word 5
+.asciz "Ancora pochi passi"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "And I Will Love You All of Forever, and Even After"
+.space 10
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Funny Face"
+.space 50
+.align 1
+.hword 2020
+.float 6.4
+.word 21
+.asciz "Angel of The North"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Angelina Call Girl"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "G the Film"
+.space 50
+.align 1
+.hword 2020
+.float 9.3
+.word 6
+.asciz "Gabriel Medina"
+.space 46
+.align 1
+.hword 2020
+.float 8.7
+.word 7
+.asciz "Gai Gia Lam Chieu 3"
+.space 41
+.align 1
+.hword 2020
+.float 5
+.word 38
+.asciz "Año Cero El Exilio"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Anything Else Hereafter"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Garagenvolk"
+.space 49
+.align 1
+.hword 2020
+.float 7.9
+.word 11
+.asciz "April Fools Fright"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Gauthamante Radham"
+.space 42
+.align 1
+.hword 2020
+.float 8.5
+.word 22
+.asciz "Gece Gelen: Cin Bebek"
+.space 39
+.align 1
+.hword 2020
+.float 3.1
+.word 12
+.asciz "Arisen Revelations"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "As Long As Your Head Is Not Cut Off You Can Wear a Hat"
+.space 6
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "As Sick as They Made Us"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "As the World Falls Down"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Gia panta"
+.space 51
+.align 1
+.hword 2020
+.float 4.8
+.word 41
+.asciz "Gift Box"
+.space 52
+.align 1
+.hword 2020
+.float 8
+.word 19
+.asciz "Glenn's Gotta Go"
+.space 44
+.align 1
+.hword 2020
+.float 1.2
+.word 5
+.asciz "Gli anni più belli"
+.space 42
+.align 1
+.hword 2020
+.float 5.7
+.word 295
+.asciz "Go!"
+.space 57
+.align 1
+.hword 2020
+.float 7.4
+.word 56
+.asciz "Goblin Slayer: Goblin's Crown"
+.space 31
+.align 1
+.hword 2020
+.float 8.1
+.word 24
+.asciz "God Father"
+.space 50
+.align 1
+.hword 2020
+.float 6.8
+.word 9
+.asciz "Gola Pravda"
+.space 49
+.align 1
+.hword 2020
+.float 5.9
+.word 12
+.asciz "Golda Maria"
+.space 49
+.align 1
+.hword 2020
+.float 7.9
+.word 8
+.asciz "Golkeri"
+.space 53
+.align 1
+.hword 2020
+.float 7.8
+.word 22
+.asciz "Gondi"
+.space 55
+.align 1
+.hword 2020
+.float 7.3
+.word 32
+.asciz "Banksy Most Wanted"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Gorod usnul"
+.space 49
+.align 1
+.hword 2020
+.float 4.9
+.word 22
+.asciz "Bau, Artist at War"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Goy"
+.space 57
+.align 1
+.hword 2020
+.float 3.9
+.word 15
+.asciz "Grainne Uaile: The Movie"
+.space 36
+.align 1
+.hword 2020
+.float 7.3
+.word 18
+.asciz "Beastie Boys Story"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Gretel & Hansel"
+.space 45
+.align 1
+.hword 2020
+.float 5.4
+.word 4487
+.asciz "Gul Makai"
+.space 51
+.align 1
+.hword 2020
+.float 3
+.word 85
+.asciz "Guns of Banaras"
+.space 45
+.align 1
+.hword 2020
+.float 9
+.word 123
+.asciz "Between You and Me"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Hacked"
+.space 54
+.align 1
+.hword 2020
+.float 4.3
+.word 183
+.asciz "HAGER"
+.space 55
+.align 1
+.hword 2020
+.float 8.1
+.word 17
+.asciz "Bi Mat Dao Linh Xa"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Halvai 5-0"
+.space 50
+.align 1
+.hword 2020
+.float 4.1
+.word 399
+.asciz "Hammamet"
+.space 52
+.align 1
+.hword 2020
+.float 5.7
+.word 645
+.asciz "Happy Happy Joy Joy: The Ren & Stimpy Story"
+.space 17
+.align 1
+.hword 2020
+.float 7.4
+.word 13
+.asciz "Happy Hardy and Heer"
+.space 40
+.align 1
+.hword 2020
+.float 7.3
+.word 749
+.asciz "Black Water: Abyss"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Hasta que la boda nos separe"
+.space 32
+.align 1
+.hword 2020
+.float 6.3
+.word 93
+.asciz "Haunted Hills"
+.space 47
+.align 1
+.hword 2020
+.float 7.4
+.word 11
+.asciz "Havana Kyrie"
+.space 48
+.align 1
+.hword 2020
+.float 5.5
+.word 6
+.asciz "Hayaller Ülkesi: Gamonya"
+.space 36
+.align 1
+.hword 2020
+.float 5.7
+.word 63
+.asciz "Bloody Summer Camp"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Bloody Unforgettable - An Interview with Charles Bernstein"
+.space 2
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Heavenquest: A Pilgrim's Progress"
+.space 27
+.align 1
+.hword 2020
+.float 4.5
+.word 72
+.asciz "Heinähattu, Vilttitossu ja ärhäkkä koululainen"
+.space 14
+.align 1
+.hword 2020
+.float 4.9
+.word 14
+.asciz "Helene"
+.space 54
+.align 1
+.hword 2020
+.float 6.5
+.word 109
+.asciz "Born in a Ballroom"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Her Deadly Reflections"
+.space 38
+.align 1
+.hword 2020
+.float 5
+.word 77
+.asciz "Her Name Was Christa"
+.space 40
+.align 1
+.hword 2020
+.float 7.9
+.word 29
+.asciz "Boys Behind Bars 4"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Herself"
+.space 53
+.align 1
+.hword 2020
+.float 7.9
+.word 25
+.asciz "High Ground"
+.space 49
+.align 1
+.hword 2020
+.float 7.4
+.word 62
+.asciz "High School Girls"
+.space 43
+.align 1
+.hword 2020
+.float 2.5
+.word 15
+.asciz "Highline"
+.space 52
+.align 1
+.hword 2020
+.float 9.5
+.word 15
+.asciz "Hillary"
+.space 53
+.align 1
+.hword 2020
+.float 3.8
+.word 56
+.asciz "His"
+.space 57
+.align 1
+.hword 2020
+.float 6.6
+.word 8
+.asciz "His House"
+.space 51
+.align 1
+.hword 2020
+.float 7.8
+.word 26
+.asciz "Hitman: Agent Jun"
+.space 43
+.align 1
+.hword 2020
+.float 7.2
+.word 64
+.asciz "Brutally Tormented"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Holly Slept Over"
+.space 44
+.align 1
+.hword 2020
+.float 5.4
+.word 84
+.asciz "Homeward"
+.space 52
+.align 1
+.hword 2020
+.float 3.4
+.word 25
+.asciz "Bustin' Balls - World Team Tennis 1974-1978"
+.space 17
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Hood Pranks the Movie"
+.space 39
+.align 1
+.hword 2020
+.float 6.8
+.word 8
+.asciz "Horse Girl"
+.space 50
+.align 1
+.hword 2020
+.float 5.9
+.word 7559
+.asciz "Captain Beavertail"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Hotwired in Suburbia"
+.space 40
+.align 1
+.hword 2020
+.float 3.6
+.word 138
+.asciz "Capture the Rhythm"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "How to Steal a Country"
+.space 38
+.align 1
+.hword 2020
+.float 7
+.word 8
+.asciz "Carolina's Calling"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Humraz: Cin Tarikati"
+.space 40
+.align 1
+.hword 2020
+.float 6.3
+.word 6
+.asciz "I Am Fear"
+.space 51
+.align 1
+.hword 2020
+.float 7.2
+.word 496
+.asciz "Changing the Devil"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "I Carry You with Me"
+.space 41
+.align 1
+.hword 2020
+.float 9
+.word 13
+.asciz "Chasing Nightmares"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Chasing the Rabbit"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "I Love Tropoja"
+.space 46
+.align 1
+.hword 2020
+.float 6.9
+.word 121
+.asciz "Chen ai li kai hua"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "I Scream on the Beach!"
+.space 38
+.align 1
+.hword 2020
+.float 7.1
+.word 16
+.asciz "Child of the Stars"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Chompy & The Girls"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Iesirea trenurilor din gara"
+.space 33
+.align 1
+.hword 2020
+.float 5.9
+.word 7
+.asciz "Ik Sandhu Hunda Si"
+.space 42
+.align 1
+.hword 2020
+.float 7.4
+.word 41
+.asciz "Cirque du Cambodia"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Im Feuer"
+.space 52
+.align 1
+.hword 2020
+.float 7.1
+.word 14
+.asciz "I'm Scared"
+.space 50
+.align 1
+.hword 2020
+.float 5.5
+.word 11
+.asciz "Importinis jaunikis"
+.space 41
+.align 1
+.hword 2020
+.float 4.8
+.word 65
+.asciz "Impractical Jokers: The Movie"
+.space 31
+.align 1
+.hword 2020
+.float 7
+.word 1034
+.asciz "India vs England"
+.space 44
+.align 1
+.hword 2020
+.float 8.3
+.word 17
+.asciz "Crafting Christmas"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "InstaFame"
+.space 51
+.align 1
+.hword 2020
+.float 6.1
+.word 35
+.asciz "Creators: The Past"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Cult of Nightmares"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Ironbark"
+.space 52
+.align 1
+.hword 2020
+.float 8.3
+.word 60
+.asciz "Irradiés"
+.space 52
+.align 1
+.hword 2020
+.float 6
+.word 29
+.asciz "Isha"
+.space 56
+.align 1
+.hword 2020
+.float 9.6
+.word 380
+.asciz "Isi & Ossi"
+.space 50
+.align 1
+.hword 2020
+.float 6.5
+.word 2705
+.asciz "It's True, It's True, It's True: Artemisia on trial"
+.space 9
+.align 1
+.hword 2020
+.float 6.7
+.word 6
+.asciz "Danur 4: Senjakala"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Jaanu"
+.space 55
+.align 1
+.hword 2020
+.float 7.8
+.word 227
+.asciz "Jagdzeit"
+.space 52
+.align 1
+.hword 2020
+.float 6.6
+.word 14
+.asciz "Jai Mummy Di"
+.space 48
+.align 1
+.hword 2020
+.float 2.5
+.word 116
+.asciz "Jak zostalem gangsterem. Historia prawdziwa"
+.space 17
+.align 1
+.hword 2020
+.float 7
+.word 270
+.asciz "James & Pat & Dave"
+.space 42
+.align 1
+.hword 2020
+.float 7.2
+.word 8
+.asciz "Janin"
+.space 55
+.align 1
+.hword 2020
+.float 6.1
+.word 7
+.asciz "Jawaani Jaaneman"
+.space 44
+.align 1
+.hword 2020
+.float 7.4
+.word 2369
+.asciz "De nacht van Sonja"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Jetzt oder morgen"
+.space 43
+.align 1
+.hword 2020
+.float 8.7
+.word 6
+.asciz "Deadly Cyber Bully"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Deadly Sugar Daddy"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Jinde Meriye"
+.space 48
+.align 1
+.hword 2020
+.float 6.5
+.word 39
+.asciz "Jiong ma"
+.space 52
+.align 1
+.hword 2020
+.float 5.8
+.word 447
+.asciz "John Henry"
+.space 50
+.align 1
+.hword 2020
+.float 3.3
+.word 322
+.asciz "Deep in the Forest"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Joseph"
+.space 54
+.align 1
+.hword 2020
+.float 5.3
+.word 6
+.asciz "Jostissi de Carreró"
+.space 41
+.align 1
+.hword 2020
+.float 10
+.word 5
+.asciz "Jumbo"
+.space 55
+.align 1
+.hword 2020
+.float 7.1
+.word 74
+.asciz "Jusqu'au déclin"
+.space 45
+.align 1
+.hword 2020
+.float 7.5
+.word 12
+.asciz "Kaaal"
+.space 55
+.align 1
+.hword 2020
+.float 4.9
+.word 8
+.asciz "D'étoile en étoile"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Kaanadante Maayavadanu"
+.space 38
+.align 1
+.hword 2020
+.float 9.2
+.word 19
+.asciz "Devil in the Woods"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Dharma Productions"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Kaiji: Fainaru gêmu"
+.space 41
+.align 1
+.hword 2020
+.float 3.2
+.word 14
+.asciz "Kajillionaire"
+.space 47
+.align 1
+.hword 2020
+.float 6.3
+.word 66
+.asciz "Kala azar"
+.space 51
+.align 1
+.hword 2020
+.float 7
+.word 10
+.asciz "Dick Dynamite 1944"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Kalashnikov"
+.space 49
+.align 1
+.hword 2020
+.float 5.7
+.word 38
+.asciz "Kannum Kannum Kollaiyadithaal"
+.space 31
+.align 1
+.hword 2020
+.float 8.3
+.word 306
+.asciz "Kaptan Pengu ve Arkadaslari"
+.space 33
+.align 1
+.hword 2020
+.float 4.6
+.word 5
+.asciz "Karakomik Filmler: Deli"
+.space 37
+.align 1
+.hword 2020
+.float 7
+.word 1110
+.asciz "Karakomik Filmler: Emanet"
+.space 35
+.align 1
+.hword 2020
+.float 5.9
+.word 1073
+.asciz "Kartoffelsalat 3 - Das Musical"
+.space 30
+.align 1
+.hword 2020
+.float 7.1
+.word 2316
+.asciz "Kaze no denwa"
+.space 47
+.align 1
+.hword 2020
+.float 6.1
+.word 14
+.asciz "Kelet"
+.space 55
+.align 1
+.hword 2020
+.float 7.2
+.word 9
+.asciz "Kem Chho?"
+.space 51
+.align 1
+.hword 2020
+.float 7.6
+.word 9
+.asciz "Kesari (Saffron)"
+.space 44
+.align 1
+.hword 2020
+.float 9.3
+.word 12
+.asciz "Don't Call Me Sir!"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Khoon shod"
+.space 50
+.align 1
+.hword 2020
+.float 5.7
+.word 19
+.asciz "Kids Run"
+.space 52
+.align 1
+.hword 2020
+.float 7.1
+.word 19
+.asciz "Kiki: Lanet-i Cin"
+.space 43
+.align 1
+.hword 2020
+.float 8.4
+.word 87
+.asciz "Kill It and Leave This Town"
+.space 33
+.align 1
+.hword 2020
+.float 7.7
+.word 17
+.asciz "Killer Camera Monsters"
+.space 38
+.align 1
+.hword 2020
+.float 2.2
+.word 59
+.asciz "Killer Ransom"
+.space 47
+.align 1
+.hword 2020
+.float 4.8
+.word 58
+.asciz "Killing Diaz"
+.space 48
+.align 1
+.hword 2020
+.float 6.3
+.word 14
+.asciz "Dreams of Darkness"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Klases Salidojums 2"
+.space 41
+.align 1
+.hword 2020
+.float 7.7
+.word 29
+.asciz "Klovn the Final"
+.space 45
+.align 1
+.hword 2020
+.float 7.2
+.word 474
+.asciz "Echo & The Diamond"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Echoes of Violence"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Kød & blod"
+.space 50
+.align 1
+.hword 2020
+.float 7.3
+.word 53
+.asciz "Kokon"
+.space 55
+.align 1
+.hword 2020
+.float 8
+.word 21
+.asciz "Eine zweite Chance"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "El anhelo del alma"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "El año de la Furia"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Kottayam"
+.space 52
+.align 1
+.hword 2020
+.float 8.2
+.word 10
+.asciz "El Maestrat Filmat"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "El Mito de la Oscuridad: Una historia de la Huasteca"
+.space 8
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Kyochuu Rettou"
+.space 46
+.align 1
+.hword 2020
+.float 4.2
+.word 22
+.asciz "El siglo de Galdós"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "El tesoro de Ibiza"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "La boda del tigre"
+.space 43
+.align 1
+.hword 2020
+.float 5.1
+.word 7
+.asciz "La bonne épouse"
+.space 45
+.align 1
+.hword 2020
+.float 5.6
+.word 16
+.asciz "La casa dell'amore"
+.space 42
+.align 1
+.hword 2020
+.float 7.8
+.word 8
+.asciz "La cravate"
+.space 50
+.align 1
+.hword 2020
+.float 7.2
+.word 56
+.asciz "La daronne"
+.space 50
+.align 1
+.hword 2020
+.float 6.4
+.word 5
+.asciz "La dosis"
+.space 52
+.align 1
+.hword 2020
+.float 6.5
+.word 16
+.asciz "La Foquita: El 10 de la calle"
+.space 31
+.align 1
+.hword 2020
+.float 5.5
+.word 16
+.asciz "La Fortaleza"
+.space 48
+.align 1
+.hword 2020
+.float 7.6
+.word 22
+.asciz "La leyenda negra"
+.space 44
+.align 1
+.hword 2020
+.float 7
+.word 7
+.asciz "La Liga de los 5"
+.space 44
+.align 1
+.hword 2020
+.float 8.1
+.word 51
+.asciz "La Marca del Demonio"
+.space 40
+.align 1
+.hword 2020
+.float 3.1
+.word 21
+.asciz "La mia banda suona il pop"
+.space 35
+.align 1
+.hword 2020
+.float 3.2
+.word 24
+.asciz "Enhanced 2 the Max"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Ennio: The Maestro"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Entree Des Artists"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "La Palma"
+.space 52
+.align 1
+.hword 2020
+.float 5.2
+.word 10
+.asciz "La suite nupcial"
+.space 44
+.align 1
+.hword 2020
+.float 5.4
+.word 19
+.asciz "Exhibition on Screen: Lucian Freud - A Self Portrait 2020"
+.space 3
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "L'Affaire Caravage"
+.space 42
+.align 1
+.hword 2020
+.float 6.3
+.word 7
+.asciz "Laila Aur Satt Geet"
+.space 41
+.align 1
+.hword 2020
+.float 7
+.word 9
+.asciz "Las Mil y Una"
+.space 47
+.align 1
+.hword 2020
+.float 6
+.word 32
+.asciz "Las niñas"
+.space 51
+.align 1
+.hword 2020
+.float 7.8
+.word 9
+.asciz "LasseMajas detektivbyrå - Tågrånarens hemlighet"
+.space 13
+.align 1
+.hword 2020
+.float 6.5
+.word 33
+.asciz "Lassie - Eine abenteuerliche Reise"
+.space 26
+.align 1
+.hword 2020
+.float 5.5
+.word 19
+.asciz "Last and First Men"
+.space 42
+.align 1
+.hword 2020
+.float 7.6
+.word 34
+.asciz "Fatally Flawless 2"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Last Letter"
+.space 49
+.align 1
+.hword 2020
+.float 6.5
+.word 31
+.asciz "Ferenj: A Graphic Memoir in Virtual Reality"
+.space 17
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Laz Kit"
+.space 53
+.align 1
+.hword 2020
+.float 1.2
+.word 400
+.asciz "Le lion"
+.space 53
+.align 1
+.hword 2020
+.float 5.3
+.word 64
+.asciz "Le prince oublié"
+.space 44
+.align 1
+.hword 2020
+.float 5.1
+.word 103
+.asciz "Le rire"
+.space 53
+.align 1
+.hword 2020
+.float 7.3
+.word 22
+.asciz "Le sel des larmes"
+.space 43
+.align 1
+.hword 2020
+.float 5.2
+.word 79
+.asciz "Five Kingdoms: The Forest and Journey of Anandas the Monk"
+.space 3
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Five Nights at Freddy's: Demons of the Past"
+.space 17
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Les bourreaux de Staline - Katyn, 1940"
+.space 22
+.align 1
+.hword 2020
+.float 7.7
+.word 13
+.asciz "Forest for the Trees: Portraits of Tree Planters"
+.space 12
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Let Them Have Their Way"
+.space 37
+.align 1
+.hword 2020
+.float 8.4
+.word 10
+.asciz "Forget to Remember"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Forgetting the Many: The Royal Pardon of Alan Turing"
+.space 8
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Frosty the Snowman"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Like a Boss"
+.space 49
+.align 1
+.hword 2020
+.float 4.3
+.word 2489
+.asciz "Lindenberg! Mach dein Ding"
+.space 34
+.align 1
+.hword 2020
+.float 6.6
+.word 213
+.asciz "Game of Two Halves"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Gandhi Memorabilia"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Gekijôban Urutoraman Taiga Nyû Jene Kuraimakkusu"
+.space 12
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Gekijouban Fate/Stay Night: Heaven's Feel - III. Spring Song"
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Loco Por Vos"
+.space 48
+.align 1
+.hword 2020
+.float 6.4
+.word 33
+.asciz "Locos de Amor 3"
+.space 45
+.align 1
+.hword 2020
+.float 4.8
+.word 10
+.asciz "LOL & The Rise of Evil"
+.space 38
+.align 1
+.hword 2020
+.float 7.6
+.word 41
+.asciz "Long Lost Sister"
+.space 44
+.align 1
+.hword 2020
+.float 5.5
+.word 73
+.asciz "Los conductos"
+.space 47
+.align 1
+.hword 2020
+.float 6
+.word 33
+.asciz "Glory to the Queen"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Los fantasmas"
+.space 47
+.align 1
+.hword 2020
+.float 7.2
+.word 11
+.asciz "Los Hijos de San Luis"
+.space 39
+.align 1
+.hword 2020
+.float 8.7
+.word 11
+.asciz "Lost Girls"
+.space 50
+.align 1
+.hword 2020
+.float 6.2
+.word 18
+.asciz "God Save the Wings"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Love Aaj Kal"
+.space 48
+.align 1
+.hword 2020
+.float 5.5
+.word 3168
+.asciz "Love Aaj Kal Porshu"
+.space 41
+.align 1
+.hword 2020
+.float 7.3
+.word 26
+.asciz "Love Mocktail"
+.space 47
+.align 1
+.hword 2020
+.float 9.3
+.word 120
+.asciz "Guardians of Crime"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Gulyay, Vasya! - 2"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Luv Ni Love Storys"
+.space 42
+.align 1
+.hword 2020
+.float 8.1
+.word 38
+.asciz "Luxor"
+.space 55
+.align 1
+.hword 2020
+.float 7.1
+.word 8
+.asciz "Lyod 2"
+.space 54
+.align 1
+.hword 2020
+.float 6.9
+.word 122
+.asciz "Lyset fra sjokoladefabrikken"
+.space 32
+.align 1
+.hword 2020
+.float 8.2
+.word 27
+.asciz "Half Past Midnight"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "M4M4"
+.space 56
+.align 1
+.hword 2020
+.float 5.2
+.word 6
+.asciz "Maarjaara Oru Kalluvacha Nuna"
+.space 31
+.align 1
+.hword 2020
+.float 9.3
+.word 340
+.asciz "Maayanadhi"
+.space 50
+.align 1
+.hword 2020
+.float 6.3
+.word 17
+.asciz "Made in Abyss: Fukaki Tamashî no Reimei"
+.space 21
+.align 1
+.hword 2020
+.float 8.8
+.word 44
+.asciz "Happy Father's Day"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Hard Nuts to Crack"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Maggie's Farm"
+.space 47
+.align 1
+.hword 2020
+.float 7.3
+.word 9
+.asciz "Magic Mountains"
+.space 45
+.align 1
+.hword 2020
+.float 6.2
+.word 22
+.asciz "Haveli Ka Hungaama"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Makeup"
+.space 54
+.align 1
+.hword 2020
+.float 3.9
+.word 14
+.asciz "Hearts and Bruises"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Malang - Unleash the Madness"
+.space 32
+.align 1
+.hword 2020
+.float 6.7
+.word 1998
+.asciz "Malasaña 32"
+.space 49
+.align 1
+.hword 2020
+.float 5.6
+.word 307
+.asciz "Heaven Stood Still: The Life and Times of Willy DeVille"
+.space 5
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Malgudi Days (Kannada Film)"
+.space 33
+.align 1
+.hword 2020
+.float 9.3
+.word 53
+.asciz "Heavy Vibes - The Vince Montana Retrospect."
+.space 17
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Malmkrog"
+.space 52
+.align 1
+.hword 2020
+.float 6
+.word 88
+.asciz "Hell, or Tidewater"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Mamá, mamá, mamá"
+.space 44
+.align 1
+.hword 2020
+.float 8.6
+.word 5
+.asciz "Mangkujiwo"
+.space 50
+.align 1
+.hword 2020
+.float 5.7
+.word 51
+.asciz "Manhunt"
+.space 53
+.align 1
+.hword 2020
+.float 4
+.word 30
+.asciz "Marafon zhelaniy"
+.space 44
+.align 1
+.hword 2020
+.float 6.6
+.word 275
+.asciz "Marcel Duchamp: Art of the Possible"
+.space 25
+.align 1
+.hword 2020
+.float 7.3
+.word 12
+.asciz "Mare"
+.space 56
+.align 1
+.hword 2020
+.float 6.2
+.word 20
+.asciz "Mariyam Vannu Vilakkoothi"
+.space 35
+.align 1
+.hword 2020
+.float 6.5
+.word 19
+.asciz "Holland Road Massacre: The Legend of Pigman"
+.space 17
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Homeless But Happy"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Masallardan Geriye Kalan"
+.space 36
+.align 1
+.hword 2020
+.float 3.9
+.word 8
+.asciz "Masameer the Movie"
+.space 42
+.align 1
+.hword 2020
+.float 7
+.word 569
+.asciz "Homes on the Range"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Max Richter's Sleep"
+.space 41
+.align 1
+.hword 2020
+.float 8.8
+.word 8
+.asciz "Mayabazaar 2016"
+.space 45
+.align 1
+.hword 2020
+.float 8.7
+.word 15
+.asciz "Me contro Te - Il film: La vendetta del Signor S"
+.space 12
+.align 1
+.hword 2020
+.float 1.5
+.word 119
+.asciz "Mellow"
+.space 54
+.align 1
+.hword 2020
+.float 8.7
+.word 7
+.asciz "I Don't Have Any Money Left in My Retirement Account"
+.space 8
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Merry Christmas, Yiwu"
+.space 39
+.align 1
+.hword 2020
+.float 6.5
+.word 10
+.asciz "Meu Nome é Bagdá"
+.space 44
+.align 1
+.hword 2020
+.float 6.9
+.word 16
+.asciz "Mhorkya"
+.space 53
+.align 1
+.hword 2020
+.float 8.3
+.word 7
+.asciz "Miami Bici"
+.space 50
+.align 1
+.hword 2020
+.float 7.5
+.word 1183
+.asciz "Ichido Shinde Mita"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Mignonnes"
+.space 51
+.align 1
+.hword 2020
+.float 8
+.word 18
+.asciz "Identity(Pehchaan)"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Így vagy tökéletes"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Milea: Suara dari Dilan"
+.space 37
+.align 1
+.hword 2020
+.float 6.5
+.word 85
+.asciz "Millennial Killer"
+.space 43
+.align 1
+.hword 2020
+.float 6.3
+.word 31
+.asciz "Min pappa Marianne"
+.space 42
+.align 1
+.hword 2020
+.float 7.4
+.word 144
+.asciz "Minamata"
+.space 52
+.align 1
+.hword 2020
+.float 7.6
+.word 139
+.asciz "Minari"
+.space 54
+.align 1
+.hword 2020
+.float 8.3
+.word 92
+.asciz "Mine de rien"
+.space 48
+.align 1
+.hword 2020
+.float 5.8
+.word 26
+.asciz "Im Reich der Filme"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Minyan"
+.space 54
+.align 1
+.hword 2020
+.float 7.1
+.word 27
+.asciz "Miss Americana"
+.space 46
+.align 1
+.hword 2020
+.float 7.4
+.word 10905
+.asciz "Miss Fisher & the Crypt of Tears"
+.space 28
+.align 1
+.hword 2020
+.float 7.2
+.word 211
+.asciz "Miss Juneteenth"
+.space 45
+.align 1
+.hword 2020
+.float 7.9
+.word 25
+.asciz "In Hope of Nothing"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "In Place of Dreams"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Model Citizen"
+.space 47
+.align 1
+.hword 2020
+.float 5.7
+.word 47
+.asciz "Modelar"
+.space 53
+.align 1
+.hword 2020
+.float 7.9
+.word 16
+.asciz "Modo Avião"
+.space 50
+.align 1
+.hword 2020
+.float 5.1
+.word 1208
+.asciz "Mogul Mowgli"
+.space 48
+.align 1
+.hword 2020
+.float 7.1
+.word 38
+.asciz "Indha Nilai Maarum"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Individualized Education Plans, a Parent's Guide"
+.space 12
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Mo'Nique & Friends: Live from Atlanta"
+.space 23
+.align 1
+.hword 2020
+.float 5.4
+.word 10
+.asciz "Internal Discourse"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Morris"
+.space 54
+.align 1
+.hword 2020
+.float 8.7
+.word 11
+.asciz "Moskau Einfach!"
+.space 45
+.align 1
+.hword 2020
+.float 6.3
+.word 29
+.asciz "Mr. Zoo: The Missing VIP"
+.space 36
+.align 1
+.hword 2020
+.float 6.1
+.word 34
+.asciz "It's About Choices"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Mucho Mucho Amor"
+.space 44
+.align 1
+.hword 2020
+.float 8.4
+.word 19
+.asciz "It's Not About You"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Mühr-ü Cin"
+.space 50
+.align 1
+.hword 2020
+.float 2.4
+.word 5
+.asciz "Muj pribeh"
+.space 50
+.align 1
+.hword 2020
+.float 4
+.word 22
+.asciz "Mujeres Arriba"
+.space 46
+.align 1
+.hword 2020
+.float 3.4
+.word 18
+.asciz "Jak zostac gwiazda"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Jayeshbhai Jordaar"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "My Boyfriend's Meds"
+.space 41
+.align 1
+.hword 2020
+.float 3.7
+.word 131
+.asciz "My Name Is Sam"
+.space 46
+.align 1
+.hword 2020
+.float 5.5
+.word 34
+.asciz "My Salinger Year"
+.space 44
+.align 1
+.hword 2020
+.float 6.5
+.word 120
+.asciz "My Spy"
+.space 54
+.align 1
+.hword 2020
+.float 5.3
+.word 385
+.asciz "Julia muss sterben"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Naadodigal 2"
+.space 48
+.align 1
+.hword 2020
+.float 6.6
+.word 22
+.asciz "Naan Sirithaal"
+.space 46
+.align 1
+.hword 2020
+.float 6.7
+.word 94
+.asciz "Naanu Matthu Gunda"
+.space 42
+.align 1
+.hword 2020
+.float 8.3
+.word 7
+.asciz "Nackte Tiere"
+.space 48
+.align 1
+.hword 2020
+.float 7.2
+.word 25
+.asciz "Kadaseela Biriyani"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Namo"
+.space 56
+.align 1
+.hword 2020
+.float 7.2
+.word 16
+.asciz "Namsan ui bujangdeul"
+.space 40
+.align 1
+.hword 2020
+.float 7.3
+.word 180
+.asciz "Nanti Kita Cerita Tentang Hari Ini"
+.space 26
+.align 1
+.hword 2020
+.float 7.7
+.word 398
+.asciz "Nasipse Olur"
+.space 48
+.align 1
+.hword 2020
+.float 5.9
+.word 11
+.asciz "Nasir"
+.space 55
+.align 1
+.hword 2020
+.float 7.6
+.word 21
+.asciz "Necroland"
+.space 51
+.align 1
+.hword 2020
+.float 8
+.word 9
+.asciz "Neem Phul"
+.space 51
+.align 1
+.hword 2020
+.float 9.6
+.word 25
+.asciz "Khorshid Nime Shab"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Khwab Sare Jhootey"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Never Rarely Sometimes Always"
+.space 31
+.align 1
+.hword 2020
+.float 7.1
+.word 201
+.asciz "Killer Cheerleader"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Kingdom of Archers"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Nightlife"
+.space 51
+.align 1
+.hword 2020
+.float 5.3
+.word 212
+.asciz "KKN di Desa Penari"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Nine Days"
+.space 51
+.align 1
+.hword 2020
+.float 8.2
+.word 91
+.asciz "Knight to E6, Or, the Italian Corn Spike of 1980"
+.space 12
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Kogda padali aisty"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "No Chance"
+.space 51
+.align 1
+.hword 2020
+.float 5.3
+.word 32
+.asciz "Kubrick by Kubrick"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Nomera"
+.space 54
+.align 1
+.hword 2020
+.float 5
+.word 25
+.asciz "Norm of the North: Family Vacation"
+.space 26
+.align 1
+.hword 2020
+.float 3.3
+.word 21
+.asciz "Nos ili zagovor netakikh"
+.space 36
+.align 1
+.hword 2020
+.float 8.3
+.word 6
+.asciz "La grande déraille"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "La Lupa (La Louve)"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "NT Live: Cyrano de Bergerac"
+.space 33
+.align 1
+.hword 2020
+.float 9
+.word 107
+.asciz "La piazza della mia città - Bologna e Lo Stato Sociale"
+.space 6
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "La pièce rapportée"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "La Ruta de la Seda"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "La Sombra Del Gato"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "La terra dei figli"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "O Reflexo do Lago"
+.space 43
+.align 1
+.hword 2020
+.float 6
+.word 5
+.asciz "Laal Singh Chaddha"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Odio l'estate"
+.space 47
+.align 1
+.hword 2020
+.float 7.1
+.word 614
+.asciz "Lalitham Sundharam"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Oh My Kadavule"
+.space 46
+.align 1
+.hword 2020
+.float 8.7
+.word 292
+.asciz "Oka Chinna Viramam"
+.space 42
+.align 1
+.hword 2020
+.float 7.8
+.word 552
+.asciz "L'appel de l'océan"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Omniboat: A Fast Boat Fantasia"
+.space 30
+.align 1
+.hword 2020
+.float 7.4
+.word 25
+.asciz "Last days on Earth"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Last Night in Soho"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "On the Arm"
+.space 50
+.align 1
+.hword 2020
+.float 8
+.word 6
+.asciz "On the Record"
+.space 47
+.align 1
+.hword 2020
+.float 8.9
+.word 15
+.asciz "On Vodka, Beers, and Regrets"
+.space 32
+.align 1
+.hword 2020
+.float 6.3
+.word 15
+.asciz "Once the Dust Settles"
+.space 39
+.align 1
+.hword 2020
+.float 6.4
+.word 9
+.asciz "Once Upon a Time in Venezuela"
+.space 31
+.align 1
+.hword 2020
+.float 8.8
+.word 10
+.asciz "One Last Prayer"
+.space 45
+.align 1
+.hword 2020
+.float 8.8
+.word 23
+.asciz "Le loup et le lion"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Le Projet Familial"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Only You Alone"
+.space 46
+.align 1
+.hword 2020
+.float 5.8
+.word 6
+.asciz "Onward"
+.space 54
+.align 1
+.hword 2020
+.float 7.4
+.word 1316
+.asciz "Onze Jongens in Miami"
+.space 39
+.align 1
+.hword 2020
+.float 4.6
+.word 89
+.asciz "Leave on the Light"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Legendary Producer"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Orbius"
+.space 54
+.align 1
+.hword 2020
+.float 10
+.word 18
+.asciz "Orkesterin edessä"
+.space 43
+.align 1
+.hword 2020
+.float 8.8
+.word 9
+.asciz "Orphea"
+.space 54
+.align 1
+.hword 2020
+.float 5.5
+.word 13
+.asciz "Otac"
+.space 56
+.align 1
+.hword 2020
+.float 7.4
+.word 207
+.asciz "Overlook"
+.space 52
+.align 1
+.hword 2020
+.float 6
+.word 33
+.asciz "Paani"
+.space 55
+.align 1
+.hword 2020
+.float 7.1
+.word 7
+.asciz "Paapam Cheyyathavar Kalleriyatte"
+.space 28
+.align 1
+.hword 2020
+.float 6.5
+.word 11
+.asciz "Pacto de Fuga"
+.space 47
+.align 1
+.hword 2020
+.float 7.7
+.word 220
+.asciz "Palazzo di giustizia"
+.space 40
+.align 1
+.hword 2020
+.float 7
+.word 10
+.asciz "Palm Springs"
+.space 48
+.align 1
+.hword 2020
+.float 7.6
+.word 98
+.asciz "Pandamonium"
+.space 49
+.align 1
+.hword 2020
+.float 3
+.word 111
+.asciz "Panga"
+.space 55
+.align 1
+.hword 2020
+.float 7.4
+.word 1832
+.asciz "Panquiaco"
+.space 51
+.align 1
+.hword 2020
+.float 6.4
+.word 7
+.asciz "Look Into Darkness"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Para toda la muerte"
+.space 41
+.align 1
+.hword 2020
+.float 7.6
+.word 17
+.asciz "Lost on Black Mesa"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Love at Look Lodge"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Patients of a Saint"
+.space 41
+.align 1
+.hword 2020
+.float 3.9
+.word 289
+.asciz "Pattas"
+.space 54
+.align 1
+.hword 2020
+.float 5.9
+.word 507
+.asciz "Patterns of Evidence: The Red Sea Miracle"
+.space 19
+.align 1
+.hword 2020
+.float 6
+.word 16
+.asciz "Low Budget Ethnic Movie"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Lowdown Dirty Criminals"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Persian Lessons"
+.space 45
+.align 1
+.hword 2020
+.float 7.7
+.word 82
+.asciz "Petite fille"
+.space 48
+.align 1
+.hword 2020
+.float 8.7
+.word 18
+.asciz "Piedra sola"
+.space 49
+.align 1
+.hword 2020
+.float 7.1
+.word 14
+.asciz "Pilsata pi upis"
+.space 45
+.align 1
+.hword 2020
+.float 7.9
+.word 134
+.asciz "Planeta 5000"
+.space 48
+.align 1
+.hword 2020
+.float 8.2
+.word 6
+.asciz "Many Moon's Strife"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Platzspitzbaby"
+.space 46
+.align 1
+.hword 2020
+.float 7.5
+.word 158
+.asciz "Mapillai Vinayagar"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Poiyattam"
+.space 51
+.align 1
+.hword 2020
+.float 6.2
+.word 12
+.asciz "Poppie Nongena"
+.space 46
+.align 1
+.hword 2020
+.float 8
+.word 13
+.asciz "Popular"
+.space 53
+.align 1
+.hword 2020
+.float 6
+.word 7
+.asciz "Masters of Romance"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Possessor"
+.space 51
+.align 1
+.hword 2020
+.float 7.2
+.word 59
+.asciz "Meendum Pudhiya Paadhai"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Prawaas"
+.space 53
+.align 1
+.hword 2020
+.float 9.4
+.word 17
+.asciz "Pressure Cooker"
+.space 45
+.align 1
+.hword 2020
+.float 8.1
+.word 21
+.asciz "Prílis osobní známost"
+.space 39
+.align 1
+.hword 2020
+.float 4.5
+.word 19
+.asciz "Messe Basse (2020)"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Prípad mrtvého neboztíka"
+.space 36
+.align 1
+.hword 2020
+.float 5.5
+.word 8
+.asciz "Prityazhenie 2"
+.space 46
+.align 1
+.hword 2020
+.float 5.8
+.word 612
+.asciz "Mi sorprendente y fabuloso amigo imaginario"
+.space 17
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Mickey on the Road"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Mike & Fred vs The Dead"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Promising Young Woman"
+.space 39
+.align 1
+.hword 2020
+.float 6.6
+.word 155
+.asciz "Psy 3: W imie zasad"
+.space 41
+.align 1
+.hword 2020
+.float 6.5
+.word 341
+.asciz "Psykos i Stockholm"
+.space 42
+.align 1
+.hword 2020
+.float 5.3
+.word 66
+.asciz "Minors in Business"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Puff Puff Pass"
+.space 46
+.align 1
+.hword 2020
+.float 6.5
+.word 8
+.asciz "Mnemonix: The Hive"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Quiet Murders"
+.space 47
+.align 1
+.hword 2020
+.float 7.2
+.word 6
+.asciz "Raahu"
+.space 55
+.align 1
+.hword 2020
+.float 7.8
+.word 17
+.asciz "Moon Over Sorrento"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Rajavukku Check"
+.space 45
+.align 1
+.hword 2020
+.float 5.9
+.word 56
+.asciz "Mr. Men and Little Miss"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Much of a Muchness"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Ras El Sana"
+.space 49
+.align 1
+.hword 2020
+.float 5.9
+.word 9
+.asciz "Rasuk 2"
+.space 53
+.align 1
+.hword 2020
+.float 6.6
+.word 9
+.asciz "Museum of Infinite"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Mutiny of the Red Water"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "My Beautiful Bride"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "My Evenings with Thomas"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Reality Queen!"
+.space 46
+.align 1
+.hword 2020
+.float 3.5
+.word 188
+.asciz "Rebelión de los Godínez"
+.space 37
+.align 1
+.hword 2020
+.float 3.2
+.word 39
+.asciz "My Little Friends and I"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "My Name Is Heather"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Rebuilding Paradise"
+.space 41
+.align 1
+.hword 2020
+.float 9.3
+.word 22
+.asciz "My Sweet Buttercup"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "N Men: The Untold Story"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Nadie muere en Ambrosía"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Relic"
+.space 55
+.align 1
+.hword 2020
+.float 6.6
+.word 34
+.asciz "Ni Sordo Ni Mudo, Sabio"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Repeat Attenders"
+.space 44
+.align 1
+.hword 2020
+.float 8.9
+.word 7
+.asciz "Rescue Me: International"
+.space 36
+.align 1
+.hword 2020
+.float 8.3
+.word 19
+.asciz "Nipples to the Sky"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "No deixis que m'enfonsi"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Nocturnal Medicine"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Ride Hard: Live Free"
+.space 40
+.align 1
+.hword 2020
+.float 8.7
+.word 7
+.asciz "Not All Who Wander"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Rizi"
+.space 56
+.align 1
+.hword 2020
+.float 5.8
+.word 70
+.asciz "Road to Red"
+.space 49
+.align 1
+.hword 2020
+.float 6.3
+.word 380
+.asciz "Rock 4"
+.space 54
+.align 1
+.hword 2020
+.float 5.6
+.word 5
+.asciz "Rocket Hunter"
+.space 47
+.align 1
+.hword 2020
+.float 1.6
+.word 50
+.asciz "O Que os Olhos Não Vêem"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Rogue Warfare 3: Death of a Nation"
+.space 26
+.align 1
+.hword 2020
+.float 5.2
+.word 54
+.asciz "Ocean of Obstacles"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Romance Doll"
+.space 48
+.align 1
+.hword 2020
+.float 6.4
+.word 16
+.asciz "Romance in the Outfield: Double Play"
+.space 24
+.align 1
+.hword 2020
+.float 7.2
+.word 6
+.asciz "Rosa Pietra e Stella"
+.space 40
+.align 1
+.hword 2020
+.float 6.6
+.word 5
+.asciz "On the Road to San Juan"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "One Night in China Town"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Rumbo al Mar"
+.space 48
+.align 1
+.hword 2020
+.float 3.8
+.word 11
+.asciz "Run Sweetheart Run"
+.space 42
+.align 1
+.hword 2020
+.float 6.5
+.word 27
+.asciz "Run Zindagi Run"
+.space 45
+.align 1
+.hword 2020
+.float 7.7
+.word 6
+.asciz "Operation Parindey"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Opération Portugal"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Ordinary Creatures"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Sab Kushal Mangal"
+.space 43
+.align 1
+.hword 2020
+.float 6.8
+.word 21
+.asciz "Oru Vadakkan Pennu"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Saezuru Tori Wa Habatakanai: The Clouds Gather"
+.space 14
+.align 1
+.hword 2020
+.float 7
+.word 7
+.asciz "Safalta 0KM"
+.space 49
+.align 1
+.hword 2020
+.float 8.1
+.word 9
+.asciz "Sahane Hayaller"
+.space 45
+.align 1
+.hword 2020
+.float 6.3
+.word 62
+.asciz "Ouija Blood Ritual"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Our Communist Life"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Our Mother the Mountain"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Outside California"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Samtidigt på Jorden"
+.space 41
+.align 1
+.hword 2020
+.float 7.1
+.word 7
+.asciz "Sanyangeui sigan"
+.space 44
+.align 1
+.hword 2020
+.float 6
+.word 51
+.asciz "Sarileru Neekevvaru"
+.space 41
+.align 1
+.hword 2020
+.float 6.6
+.word 3288
+.asciz "Panther Homecoming"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Saudi Runaway"
+.space 47
+.align 1
+.hword 2020
+.float 7.7
+.word 23
+.asciz "Savage Creatures"
+.space 44
+.align 1
+.hword 2020
+.float 5.1
+.word 7
+.asciz "Paranoia Tapes 06:06:06"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Save and Quit?"
+.space 46
+.align 1
+.hword 2020
+.float 6.4
+.word 8
+.asciz "Save Yourselves!"
+.space 44
+.align 1
+.hword 2020
+.float 7.4
+.word 42
+.asciz "Paris Calligrammes"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Payne & Redemption"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Peace by Chocolate"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Schwarze Milch"
+.space 46
+.align 1
+.hword 2020
+.float 7
+.word 10
+.asciz "Schwesterlein"
+.space 47
+.align 1
+.hword 2020
+.float 6.2
+.word 72
+.asciz "Scumbag"
+.space 53
+.align 1
+.hword 2020
+.float 7.5
+.word 85
+.asciz "Perempuan Bergaun Merah"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Se mieletön remppa"
+.space 42
+.align 1
+.hword 2020
+.float 4.6
+.word 50
+.asciz "Sebelum Iblis Menjemput: Ayat Dua"
+.space 27
+.align 1
+.hword 2020
+.float 6.5
+.word 77
+.asciz "Phantom of the Ice"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Secret Zoo"
+.space 50
+.align 1
+.hword 2020
+.float 6.4
+.word 187
+.asciz "Pierrot sui Binari"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Seeru"
+.space 55
+.align 1
+.hword 2020
+.float 5.5
+.word 26
+.asciz "Selfie King"
+.space 49
+.align 1
+.hword 2020
+.float 7.8
+.word 9
+.asciz "Semina il vento"
+.space 45
+.align 1
+.hword 2020
+.float 7
+.word 11
+.asciz "Pothanur Thabal Nilayam"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Potreba za mrznjom"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Sergio"
+.space 54
+.align 1
+.hword 2020
+.float 7.2
+.word 43
+.asciz "Prayers Do Nothing"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Servants"
+.space 52
+.align 1
+.hword 2020
+.float 6.9
+.word 25
+.asciz "Seurapeli"
+.space 51
+.align 1
+.hword 2020
+.float 8.1
+.word 9
+.asciz "Seven Days in Mexico"
+.space 40
+.align 1
+.hword 2020
+.float 8.8
+.word 8
+.asciz "Prezumptsiya vinovnosti"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Pro Lyolyu i Minku"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Profession du père"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Project X-Traction"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Sheytan vojud nadarad"
+.space 39
+.align 1
+.hword 2020
+.float 7.7
+.word 72
+.asciz "Shikara"
+.space 53
+.align 1
+.hword 2020
+.float 2.1
+.word 4379
+.asciz "Shimla Mirchi"
+.space 47
+.align 1
+.hword 2020
+.float 4.7
+.word 590
+.asciz "Shine Your Eyes"
+.space 45
+.align 1
+.hword 2020
+.float 6.9
+.word 24
+.asciz "Shivaji Surathkal"
+.space 43
+.align 1
+.hword 2020
+.float 8.7
+.word 86
+.asciz "Shubh Mangal Zyada Saavdhan"
+.space 33
+.align 1
+.hword 2020
+.float 6.7
+.word 2295
+.asciz "Shukranu"
+.space 52
+.align 1
+.hword 2020
+.float 6.5
+.word 255
+.asciz "Si c'était de l'amour"
+.space 39
+.align 1
+.hword 2020
+.float 8.6
+.word 7
+.asciz "Si yo fuera el invierno mismo"
+.space 31
+.align 1
+.hword 2020
+.float 6.1
+.word 8
+.asciz "Sifir Bir"
+.space 51
+.align 1
+.hword 2020
+.float 7.3
+.word 314
+.asciz "Silencer"
+.space 52
+.align 1
+.hword 2020
+.float 9.4
+.word 425
+.asciz "Rashna:The Ray of Light"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Silmästä silmään"
+.space 44
+.align 1
+.hword 2020
+.float 8
+.word 5
+.asciz "Ratu Kala Jengking"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Sin Señas Particulares"
+.space 38
+.align 1
+.hword 2020
+.float 9
+.word 12
+.asciz "Sin Sister"
+.space 50
+.align 1
+.hword 2020
+.float 7.3
+.word 15
+.asciz "Sinister Stalker"
+.space 44
+.align 1
+.hword 2020
+.float 4.8
+.word 25
+.asciz "Sipsik"
+.space 54
+.align 1
+.hword 2020
+.float 6.4
+.word 34
+.asciz "Sisters in the End of the World"
+.space 29
+.align 1
+.hword 2020
+.float 5.6
+.word 5
+.asciz "Slow Machine"
+.space 48
+.align 1
+.hword 2020
+.float 5.2
+.word 14
+.asciz "Remember to Forget"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Retfærdighedens ryttere"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Revolution Televised II"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "ReWilding Kernwood"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Softie"
+.space 54
+.align 1
+.hword 2020
+.float 8.1
+.word 7
+.asciz "Sol"
+.space 57
+.align 1
+.hword 2020
+.float 6.6
+.word 14
+.asciz "Some Kind of Heaven"
+.space 41
+.align 1
+.hword 2020
+.float 8.7
+.word 18
+.asciz "Rise of the Saints"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Song of Songs: The Journey of a Consecrated Virgin"
+.space 10
+.align 1
+.hword 2020
+.float 9.7
+.word 6
+.asciz "Robotboy the movie"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Sonic the Hedgehog"
+.space 42
+.align 1
+.hword 2020
+.float 6.8
+.word 21897
+.asciz "Rollercoaster Ride"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Romeo & Romeo: End Game"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Romeo Idiot Desi Juliet"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Rozovoe ili kolokolchik"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Spaceship Earth"
+.space 45
+.align 1
+.hword 2020
+.float 7.9
+.word 8
+.asciz "Speer Goes to Hollywood"
+.space 37
+.align 1
+.hword 2020
+.float 6.6
+.word 9
+.asciz "Sabne bana di jodi"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Spring Uje spring"
+.space 43
+.align 1
+.hword 2020
+.float 7.9
+.word 21
+.asciz "Sprite Sisters - Vier zauberhafte Schwestern"
+.space 16
+.align 1
+.hword 2020
+.float 5.4
+.word 29
+.asciz "Sadha Nannu Nadipe"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Spy Intervention"
+.space 44
+.align 1
+.hword 2020
+.float 5.2
+.word 930
+.asciz "Squeezed Up - Tales of Polynesian Pop and Kustom Kulture"
+.space 4
+.align 1
+.hword 2020
+.float 10
+.word 5
+.asciz "Sri Bharatha Baahubali"
+.space 38
+.align 1
+.hword 2020
+.float 9.6
+.word 909
+.asciz "Stage Mother"
+.space 48
+.align 1
+.hword 2020
+.float 7.9
+.word 23
+.asciz "Sajan Bakery Since 1962"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Stan the Man"
+.space 48
+.align 1
+.hword 2020
+.float 7.7
+.word 10
+.asciz "Satyameva Jayate 2"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Sayonara made no 30-bun"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Se upp för Jönssonligan"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Street Dancer 3D"
+.space 44
+.align 1
+.hword 2020
+.float 3.8
+.word 3080
+.asciz "Secrets in the Air"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Secrets of A Side Chick"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Südamering"
+.space 50
+.align 1
+.hword 2020
+.float 6.3
+.word 17
+.asciz "Sufna"
+.space 55
+.align 1
+.hword 2020
+.float 8.6
+.word 162
+.asciz "Seni Bulacam Oglum"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Sex and the Future"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Suraya"
+.space 54
+.align 1
+.hword 2020
+.float 7.6
+.word 9
+.asciz "Sh*% the President Says"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Suriname"
+.space 52
+.align 1
+.hword 2020
+.float 5.2
+.word 104
+.asciz "Shadows of Freedom"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Svartklubb"
+.space 50
+.align 1
+.hword 2020
+.float 6.2
+.word 5
+.asciz "Showdown at Pizza Towne"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Swingersi"
+.space 51
+.align 1
+.hword 2020
+.float 7.5
+.word 47
+.asciz "Si j'étais fermier"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Sylvie"
+.space 54
+.align 1
+.hword 2020
+.float 8.3
+.word 23
+.asciz "Sí mi amor, la película"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Ta fang jian li de yun"
+.space 38
+.align 1
+.hword 2020
+.float 6.8
+.word 21
+.asciz "Taana"
+.space 55
+.align 1
+.hword 2020
+.float 5.1
+.word 21
+.asciz "Taanashah"
+.space 51
+.align 1
+.hword 2020
+.float 8.9
+.word 9
+.asciz "Tales from the Campfire 3"
+.space 35
+.align 1
+.hword 2020
+.float 6.8
+.word 8
+.asciz "Talita"
+.space 54
+.align 1
+.hword 2020
+.float 7.7
+.word 153
+.asciz "Simply... Understanding"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Talve"
+.space 55
+.align 1
+.hword 2020
+.float 6.7
+.word 159
+.asciz "Tanhaji: The Unsung Warrior"
+.space 33
+.align 1
+.hword 2020
+.float 8.4
+.word 14256
+.asciz "Six Minutes to Midnight"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Te quiero, imbécil"
+.space 42
+.align 1
+.hword 2020
+.float 6.9
+.word 32
+.asciz "Slumber Party Slaughter Party 2 (New Blood)"
+.space 17
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Slumber with a Key"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Tékasztorik 2"
+.space 47
+.align 1
+.hword 2020
+.float 6.9
+.word 33
+.asciz "Smierc Zygielbojma"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Temen Kondangan"
+.space 45
+.align 1
+.hword 2020
+.float 6.5
+.word 8
+.asciz "Templars the Da Vinci Code Secrets"
+.space 26
+.align 1
+.hword 2020
+.float 9.8
+.word 8
+.asciz "Tenere"
+.space 54
+.align 1
+.hword 2020
+.float 9.1
+.word 16
+.asciz "Teräsleidit"
+.space 49
+.align 1
+.hword 2020
+.float 7.1
+.word 101
+.asciz "Soldiers of Heaven"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Solo Brathuke So Better"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Solteira Quase Surtando"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Some Adult Content"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Thakkol Pazhuthu"
+.space 44
+.align 1
+.hword 2020
+.float 7
+.word 6
+.asciz "Thappad"
+.space 53
+.align 1
+.hword 2020
+.float 6.5
+.word 5467
+.asciz "Sorry I Killed You"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The 40-Year-Old Version"
+.space 37
+.align 1
+.hword 2020
+.float 7.1
+.word 28
+.asciz "Soup R Hood Heroes"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "South of the River"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Accused: Damned or Devoted?"
+.space 29
+.align 1
+.hword 2020
+.float 7.7
+.word 11
+.asciz "South Tyrol's Far North"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The American Sector"
+.space 41
+.align 1
+.hword 2020
+.float 6.9
+.word 11
+.asciz "The Average Color of the Universe"
+.space 27
+.align 1
+.hword 2020
+.float 6.5
+.word 10
+.asciz "The Big Shot"
+.space 48
+.align 1
+.hword 2020
+.float 6
+.word 17
+.asciz "The Blackwell Ghost 4"
+.space 39
+.align 1
+.hword 2020
+.float 8.3
+.word 20
+.asciz "The Bridge Curse"
+.space 44
+.align 1
+.hword 2020
+.float 6.8
+.word 21
+.asciz "The Calming"
+.space 49
+.align 1
+.hword 2020
+.float 5.1
+.word 9
+.asciz "Summer Shenanigans"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Sunday Night Fever"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Surviving Burkitts"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Cost of Silence"
+.space 41
+.align 1
+.hword 2020
+.float 9
+.word 8
+.asciz "Sweet Painted Lady"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Dark Side of Opulent"
+.space 36
+.align 1
+.hword 2020
+.float 2.6
+.word 9
+.asciz "Tears of the Clown"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Ten Minutes to Midnight"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Dissident"
+.space 47
+.align 1
+.hword 2020
+.float 8.9
+.word 2184
+.asciz "Tengo Miedo Torero"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Doctor's Monster"
+.space 40
+.align 1
+.hword 2020
+.float 1.7
+.word 26
+.asciz "Teresa Had A Dream"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Earth Is Blue as an Orange"
+.space 30
+.align 1
+.hword 2020
+.float 8.2
+.word 30
+.asciz "Thagithey Thandana"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "That One Hurt- An Interview with Editor Anthony Redman"
+.space 6
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "That Other Village"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The 3/5 Compromise"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Evening Hour"
+.space 44
+.align 1
+.hword 2020
+.float 7.3
+.word 27
+.asciz "The Angola Project"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Anomaly Factor"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Art of Dissent"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Atlantic City Story"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Awakening of Lilith"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Ballad of Don Lewis"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Format"
+.space 50
+.align 1
+.hword 2020
+.float 9.2
+.word 26
+.asciz "The Foundation Pit"
+.space 42
+.align 1
+.hword 2020
+.float 7.7
+.word 6
+.asciz "The Best is Yet to Come"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Billion Dollar Game"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Girl in the Mirror"
+.space 38
+.align 1
+.hword 2020
+.float 3.4
+.word 41
+.asciz "The Glorias"
+.space 49
+.align 1
+.hword 2020
+.float 6
+.word 61
+.asciz "The Blind Assassin"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Grand Grandmaster"
+.space 39
+.align 1
+.hword 2020
+.float 5
+.word 49
+.asciz "The Great Brady Heist"
+.space 39
+.align 1
+.hword 2020
+.float 8.1
+.word 8
+.asciz "The Grounds"
+.space 49
+.align 1
+.hword 2020
+.float 6.6
+.word 19
+.asciz "The Hand Bag"
+.space 48
+.align 1
+.hword 2020
+.float 9.1
+.word 10
+.asciz "The Briefcase Messenger"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Brother's Game"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Horn"
+.space 52
+.align 1
+.hword 2020
+.float 8.8
+.word 12
+.asciz "The Christmas Ball"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Christmas Project 2"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Christmas Ride"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Collusion Rule"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Colors of Hell"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Competitor's Gospel"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Curse of Bryerstone"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Dark and the Wicked"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Deacon of Doom"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Killing of Two Lovers"
+.space 35
+.align 1
+.hword 2020
+.float 8.9
+.word 38
+.asciz "The Kung Fu Master"
+.space 42
+.align 1
+.hword 2020
+.float 7.7
+.word 39
+.asciz "The Dinner Parting"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Dirt Whisperer"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Edge of All We Know"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Last Shift"
+.space 46
+.align 1
+.hword 2020
+.float 7.1
+.word 20
+.asciz "The Last Thing He Wanted"
+.space 36
+.align 1
+.hword 2020
+.float 4.3
+.word 5511
+.asciz "The Legend of Baron To'a"
+.space 36
+.align 1
+.hword 2020
+.float 7.9
+.word 21
+.asciz "The Eye of Deception - An Interview with Charles Minsky"
+.space 5
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Family Remains"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Fight for Greenland"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Final Decision"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Forest Will Eat You"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Mole Agent"
+.space 46
+.align 1
+.hword 2020
+.float 8.8
+.word 13
+.asciz "The Mountains Are a Dream That Call to Me"
+.space 19
+.align 1
+.hword 2020
+.float 8.1
+.word 14
+.asciz "The Honeysuckle Sisters"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Night Clerk"
+.space 45
+.align 1
+.hword 2020
+.float 5.1
+.word 976
+.asciz "The Night House"
+.space 45
+.align 1
+.hword 2020
+.float 7.1
+.word 55
+.asciz "The Nowhere Inn"
+.space 45
+.align 1
+.hword 2020
+.float 6.4
+.word 23
+.asciz "The Office Mix-Up"
+.space 43
+.align 1
+.hword 2020
+.float 5.3
+.word 6
+.asciz "The Painter and the Thief"
+.space 35
+.align 1
+.hword 2020
+.float 8.6
+.word 30
+.asciz "The ParaPod Movie"
+.space 43
+.align 1
+.hword 2020
+.float 9.1
+.word 18
+.asciz "The Party Planner"
+.space 43
+.align 1
+.hword 2020
+.float 4.9
+.word 83
+.asciz "The Karate Breaker"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Perfect Pickup"
+.space 42
+.align 1
+.hword 2020
+.float 4.9
+.word 54
+.asciz "The King of Spades"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Klatos Paradox"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Lake of Ghosts"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Land of Dreams"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Last Five Days"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Last House Standing"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Last of the Savages"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Last Page of Summer"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Law of Silence"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Rain Falls Where it Will"
+.space 32
+.align 1
+.hword 2020
+.float 5.7
+.word 10
+.asciz "The Reason I Jump"
+.space 43
+.align 1
+.hword 2020
+.float 9.5
+.word 13
+.asciz "The Lives of Better Men"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Rhythm Section"
+.space 42
+.align 1
+.hword 2020
+.float 5.3
+.word 2267
+.asciz "The Lost Recursion"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Riot and the Dance"
+.space 38
+.align 1
+.hword 2020
+.float 8.4
+.word 15
+.asciz "The Lucifer Factor"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Roads Not Taken"
+.space 41
+.align 1
+.hword 2020
+.float 5.2
+.word 109
+.asciz "The Mafia: Payback"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Royal Train"
+.space 45
+.align 1
+.hword 2020
+.float 7.7
+.word 7
+.asciz "The Man with the Camera"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Match-Stick Flame 2"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Self Portrait"
+.space 43
+.align 1
+.hword 2020
+.float 8.3
+.word 39
+.asciz "The Serpent"
+.space 49
+.align 1
+.hword 2020
+.float 7
+.word 25
+.asciz "The Miracle Centre"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Mona Lisa Five"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Social Dilemma"
+.space 42
+.align 1
+.hword 2020
+.float 8.3
+.word 13
+.asciz "The Motorcycle Man"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Mountain Kings"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The next 8 seconds"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Nostradamus Mission"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Sun"
+.space 53
+.align 1
+.hword 2020
+.float 8.1
+.word 19
+.asciz "The Painter's Edge"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Trip to Greece"
+.space 42
+.align 1
+.hword 2020
+.float 8.2
+.word 20
+.asciz "The Trouble with Being Born"
+.space 33
+.align 1
+.hword 2020
+.float 4.6
+.word 42
+.asciz "The Trouble with Nature"
+.space 37
+.align 1
+.hword 2020
+.float 7.6
+.word 20
+.asciz "The Truffle Hunters"
+.space 41
+.align 1
+.hword 2020
+.float 8.5
+.word 11
+.asciz "The Truth Will Out"
+.space 42
+.align 1
+.hword 2020
+.float 5.7
+.word 23
+.asciz "The Pitesti Experiment/Experimentul Pitesti"
+.space 17
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Plea Agreement"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The rabbits' house"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Rarity Feature"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Windermere Children"
+.space 37
+.align 1
+.hword 2020
+.float 7.1
+.word 760
+.asciz "The Wishmas Tree"
+.space 44
+.align 1
+.hword 2020
+.float 8.2
+.word 6
+.asciz "The Roads of Exile"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Scar That Scares Me"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Secret of Sinchanee"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Shape of Tulip"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Sleeping Negro"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Springfield Missing"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Truth About Us"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Timmy Failure: Mistakes Were Made"
+.space 27
+.align 1
+.hword 2020
+.float 6.2
+.word 735
+.asciz "To All the Boys: P.S. I Still Love You"
+.space 22
+.align 1
+.hword 2020
+.float 6.1
+.word 12108
+.asciz "To Die in the Pure Water"
+.space 36
+.align 1
+.hword 2020
+.float 5.3
+.word 7
+.asciz "The Vanishing Time"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Voiceless Roar"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Tobulas Pasimatymas"
+.space 41
+.align 1
+.hword 2020
+.float 6.8
+.word 127
+.asciz "Todos os Mortos"
+.space 45
+.align 1
+.hword 2020
+.float 5.9
+.word 89
+.asciz "Toko Barang Mantan"
+.space 42
+.align 1
+.hword 2020
+.float 6.1
+.word 21
+.asciz "Tokoloshe-The Calling"
+.space 39
+.align 1
+.hword 2020
+.float 6
+.word 18
+.asciz "Tolo Tolo"
+.space 51
+.align 1
+.hword 2020
+.float 6.2
+.word 1560
+.asciz "The Weight of Life"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The West Territory"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Torn Cloth"
+.space 50
+.align 1
+.hword 2020
+.float 8.7
+.word 7
+.asciz "The Woman in the Window"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "The Woman Under the Bed"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Thee Wreckers Tetralogy"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "They Ain't Ready for Me"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Thirty Pieces of Silver"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "This Is Not a War Story"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "This Is Not Normal"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "This Is Your Laugh"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Three Legged Horse"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Three Pregnant Men"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "True to the Game 2: Gena's Story"
+.space 28
+.align 1
+.hword 2020
+.float 6.5
+.word 8
+.asciz "Through the mother"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Throwdown in East Cheap"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Thunderbolt In Mine Eye"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Turn Out the Lights"
+.space 41
+.align 1
+.hword 2020
+.float 9.8
+.word 6
+.asciz "To onoma toy rodou"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "To Protect & Serve"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "To the Unknown God"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Two of Us"
+.space 51
+.align 1
+.hword 2020
+.float 4.6
+.word 594
+.asciz "Toke N Choke Dispensary"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Um Animal Amarelo"
+.space 43
+.align 1
+.hword 2020
+.float 7.4
+.word 5
+.asciz "Un crimen común"
+.space 45
+.align 1
+.hword 2020
+.float 5.2
+.word 23
+.asciz "Topology of Sirens"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Toward Singularity"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Underwater"
+.space 50
+.align 1
+.hword 2020
+.float 6.1
+.word 9713
+.asciz "Unit Eleven"
+.space 49
+.align 1
+.hword 2020
+.float 9.7
+.word 6
+.asciz "United Nation Three Decades of Drum & Bass"
+.space 18
+.align 1
+.hword 2020
+.float 8.9
+.word 327
+.asciz "Trust Me, I'm Sick"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Unprescribed"
+.space 48
+.align 1
+.hword 2020
+.float 10
+.word 5
+.asciz "Uppercase Print"
+.space 45
+.align 1
+.hword 2020
+.float 6.8
+.word 63
+.asciz "Uppity: The Willy T. Ribbs Story"
+.space 28
+.align 1
+.hword 2020
+.float 8.1
+.word 261
+.asciz "Turma da Mônica: Lições"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Us Kids"
+.space 53
+.align 1
+.hword 2020
+.float 7.6
+.word 9
+.asciz "Utthara"
+.space 53
+.align 1
+.hword 2020
+.float 8.9
+.word 8
+.asciz "V síti"
+.space 54
+.align 1
+.hword 2020
+.float 9.2
+.word 8
+.asciz "Vaanam Kottattum"
+.space 44
+.align 1
+.hword 2020
+.float 7.3
+.word 38
+.asciz "Two Weeks with Tom"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Varane Avashyamund"
+.space 42
+.align 1
+.hword 2020
+.float 7.1
+.word 325
+.asciz "Vento Seco"
+.space 50
+.align 1
+.hword 2020
+.float 6.3
+.word 18
+.asciz "Undercover Barista"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Une sirène à Paris"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Unknown Dimension: The Story of Paranormal Activity"
+.space 9
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Viddana"
+.space 53
+.align 1
+.hword 2020
+.float 7.5
+.word 114
+.asciz "Vihanpidot"
+.space 50
+.align 1
+.hword 2020
+.float 3.5
+.word 6
+.asciz "Villetta con ospiti"
+.space 41
+.align 1
+.hword 2020
+.float 4.3
+.word 18
+.asciz "UTE: Music Makes Me Fly"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Uvieta, El Musical"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Vacances sur Terre"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Viva the Underdogs"
+.space 42
+.align 1
+.hword 2020
+.float 9.2
+.word 51
+.asciz "Vivos"
+.space 55
+.align 1
+.hword 2020
+.float 7.6
+.word 5
+.asciz "Volevo nascondermi"
+.space 42
+.align 1
+.hword 2020
+.float 5.9
+.word 166
+.asciz "Vores mand i Amerika"
+.space 40
+.align 1
+.hword 2020
+.float 6.7
+.word 10
+.asciz "Veins of the World"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "VERIEM: We Believe"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Very Important Problems"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Waiting for Anya"
+.space 44
+.align 1
+.hword 2020
+.float 5.2
+.word 151
+.asciz "Walchensee Forever"
+.space 42
+.align 1
+.hword 2020
+.float 9.4
+.word 9
+.asciz "Vietnam from Above"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Walnut Tree"
+.space 49
+.align 1
+.hword 2020
+.float 6.9
+.word 30
+.asciz "Wander Darkly"
+.space 47
+.align 1
+.hword 2020
+.float 8.1
+.word 22
+.asciz "War with Grandpa"
+.space 44
+.align 1
+.hword 2020
+.float 6.6
+.word 54
+.asciz "Voices of Parkland"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Vork and the Beast"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "We Are from There"
+.space 43
+.align 1
+.hword 2020
+.float 7
+.word 7
+.asciz "Walking Over Water"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "We Make Antiques 2"
+.space 42
+.align 1
+.hword 2020
+.float 6.8
+.word 5
+.asciz "Wanda, mein Wunder"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Water get no enemy"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Welcome to Chechnya"
+.space 41
+.align 1
+.hword 2020
+.float 8.8
+.word 36
+.asciz "We Are the Missing"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "What Is Life Worth"
+.space 42
+.align 1
+.hword 2020
+.float 8.7
+.word 41
+.asciz "What Love Looks Like"
+.space 40
+.align 1
+.hword 2020
+.float 5.4
+.word 123
+.asciz "What the Night Can Do"
+.space 39
+.align 1
+.hword 2020
+.float 7.8
+.word 10
+.asciz "Well of Lies - An Interview with Deborah Goodrich Royce"
+.space 5
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "West L.A. Fadeaway"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "What Doesn't Float"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Whirlybird"
+.space 50
+.align 1
+.hword 2020
+.float 8.2
+.word 13
+.asciz "What if it Was Me?"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "When Liberty Burns"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "When the River Runs Dry"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "When We Last Spoke"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Wild Karnataka"
+.space 46
+.align 1
+.hword 2020
+.float 9
+.word 173
+.asciz "Window Boy Would Also Like to Have a Submarine"
+.space 14
+.align 1
+.hword 2020
+.float 5.8
+.word 17
+.asciz "White People Money"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Wolfwood"
+.space 52
+.align 1
+.hword 2020
+.float 5.2
+.word 13
+.asciz "Wide Open - Vanilla Ice"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "World Famous Lover"
+.space 42
+.align 1
+.hword 2020
+.float 4.6
+.word 474
+.asciz "Wotaku ni Koi wa Muzukashii"
+.space 33
+.align 1
+.hword 2020
+.float 5.2
+.word 9
+.asciz "Women Behind the Wheel: Unheard Voices on the Pamir Highway"
+.space 1
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Xin nian tai feng kuang"
+.space 37
+.align 1
+.hword 2020
+.float 5.8
+.word 12
+.asciz "Yaga. Koshmar tyomnogo lesa"
+.space 33
+.align 1
+.hword 2020
+.float 6.1
+.word 144
+.asciz "Yahan Sabhi Gyani Hain"
+.space 38
+.align 1
+.hword 2020
+.float 8.6
+.word 91
+.asciz "Wormwood: A German Expressionistic Dystopia"
+.space 17
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Yardy"
+.space 55
+.align 1
+.hword 2020
+.float 4.6
+.word 5
+.asciz "Yeh Ballet"
+.space 50
+.align 1
+.hword 2020
+.float 7.6
+.word 300
+.asciz "You Know Him"
+.space 48
+.align 1
+.hword 2020
+.float 7.6
+.word 19
+.asciz "Your Love Song"
+.space 46
+.align 1
+.hword 2020
+.float 7.8
+.word 29
+.asciz "Young Woman and the Sea"
+.space 37
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Zakleté pírko"
+.space 47
+.align 1
+.hword 2020
+.float 1.7
+.word 10
+.asciz "Zabawa w chowanego"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Zenek"
+.space 55
+.align 1
+.hword 2020
+.float 1.4
+.word 820
+.asciz "Zai Jian Shao Nian"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+.asciz "Zombie Bear Attack"
+.space 42
+.align 1
+.hword 2020
+.float 0
+.word 0
+

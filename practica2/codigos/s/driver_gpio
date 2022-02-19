@@ -1,0 +1,232 @@
+.data
+.equ DIR_BASE, 0x3F200000
+.align 2
+GPDIR: .space 4
+
+.text
+.extern div_10
+.globl prog_gpio
+.globl valor_gpio
+.globl leeValor_gpio
+.globl driver_gpio
+.globl progEv_gpio
+.globl leeEv_gpio
+.globl clearEv_gpio
+
+
+
+
+prog_gpio:
+
+          stmdb sp!, {r4,r5,r6,r7,lr}
+
+          @guardamos los parametros: terminal gpio y funcionalidad
+          mov r4, r0
+          mov r5, r1
+
+          @obtenemos direccion base logica GPIO
+          mov r0,#13
+          ldr r1, =DIR_BASE
+          mov r2, #0x100
+          swi 0x68
+
+           @guardamos direccion en variable local
+           ldr r6, =GPDIR
+           str r3, [r6]
+           mov r7, r3 @copia de la direccion base
+
+           @calculamos offset para el gpio deseado.
+           mov r0, r4
+           mov r4, #4
+           bl div_10
+           mul r0, r4, r0 @offset al nivel GPSEL correspondiente
+           add r7, r7, r0 @direccion GPSELn
+
+
+           @ realizar una mascara para anular los tres bits asociados al terminal deseado sin manipular los restantes
+           mov r2, #7 @111
+           mov r0, #3
+           mul r0, r1, r0 @desplazamiento: 3xresto
+           mov r5, r5, lsl  r0 @booleano
+           mov r2, r2, lsl  r0 @mascara
+
+           @accedemos al modo supervisor
+           swi 0x16
+
+           ldr r4, [r7] @accedemos al contenido del registro
+           bic r4, r4, r2 @bit clear en los tres bits del terminal
+           orr r4, r4, r5 @escribimos el booleano sin alterar el resto de bits
+           str r4, [r7]
+
+           @salimos del modo supervisor
+           swi 0x7C
+
+          ldmia sp!, {r4,r5,r6,r7,pc}
+
+
+
+
+valor_gpio:
+
+          stmdb sp!, {r4,r5,lr}
+
+          @guardamos el numero del gpio y el valor de salida
+          mov r4, r0
+          mov r5, r1
+
+
+         @comprobamos el booleano para saber a que registro acceder: 1 GPSET, 0 GPCLR.
+         ldr r2, =GPDIR @direccion base
+         ldr r2,[r2]
+         cmp r5, #1
+         beq SET
+         mov r5, #1
+         cmp r4, #32 @comparamos numero de terminal para saber que registro usar
+         subge r4, r4, #32
+         addge r2, r2, #0x02C @CLR1
+         addlt r2,r2, #0x028 @CLR0
+         lsl r5, r5, r4 @desplazamos el 1 las posiciones necesarias.
+         b fin_valor
+
+
+
+         @una vez localizado el terminal y calculado el offset correspondiente, podemos acceder a modo sistema y realizar los cambios.
+
+
+SET:     mov r5, #1
+         cmp r4, #32
+         subge r4,r4,#32
+         addge r2,r2,#0x020 @SET1
+         addlt r2,r2,#0x01C @SET0
+         lsl r5, r5, r4 @desplazamos el 1 las posiciones necesarias.
+         b fin_valor
+
+
+fin_valor:
+
+         @entramos en modo sistema y realizamos los cambios convenientes
+         swi 0x16
+         str r5, [r2] @escribimos la mascara sobre el registro adecuado
+         @salimos del modo supervisor
+         swi 0x7C
+
+         ldmia sp!, {r4,r5,pc}
+
+
+
+leeValor_gpio:
+
+         stmdb sp!, {r4,lr}
+
+         mov r4, r0 @guardamos numero de terminal
+         ldr r2, =GPDIR
+         ldr r2, [r2]
+         mov r3, #1
+
+         cmp r4, #32
+         subge r4,r4, #32
+         addge r2,r2, #0x038 @GPSLEV1
+         addlt r2,r2, #0x034 @GPSLEV0
+         lsl r3, r3, r4 @mascara al bit deseado
+
+
+         @entramos en modo sistema
+         swi 0x16
+
+         ldr r1, [r2]
+         and r3, r1, r3
+         lsr r3, r3, r4
+
+         @salimos modo supervisor
+         swi 0x7C
+
+         mov r0, r3 @una vez leido el valor del gpio, lo retornamos
+
+         ldmia sp!, {r4, pc}
+
+
+
+progEv_gpio:
+
+         stmdb sp!, {r4,r5,r6,lr}
+         mov r4, r0 @guardamos terminal gpio
+         mov r5, r1 @guardamos tipo de evento: flanco ascendente o descendente
+         ldr r6, =GPDIR
+         ldr r6, [r6] @direccion base logica de GPIO
+
+         @determinamos tipo de evento
+         cmp r5, #1
+         beq ASCENDENTE
+
+         @evento descendente
+         mov r5, #1
+         cmp r4, #32
+         subge r4,r4, #32
+         addge r6,r6, #0x05C @GPFEN1
+         addlt r6,r6, #0x058 @GPFEN0
+         lsl r5,r5, r4 @desplazamos el 1 al bit indicado
+         b FIN
+
+
+
+
+ASCENDENTE:
+         mov r5, #1
+         cmp r4, #32
+         subge r4,r4, #32
+         addge r6,r6, #0x050 @GPREN1
+         addlt r6,r6, #0x04C @GPREN0
+         lsl r5,r5, r4 @desplazamos el 1 al bit indicado
+         b FIN
+
+
+FIN:     swi 0x16
+         ldr r2, [r6]
+         orr r5, r2, r5
+         str r5, [r6]
+         swi 0x7C
+         ldmia sp!, {r4,r5,r6,pc}
+
+
+
+leeEv_gpio:
+        stmdb sp!, {r4,r5,lr}
+        mov r4, r0 @guardamos terminal gpio
+        ldr r5, =GPDIR
+        ldr r5, [r5] @accedemos a la direccion base logica de GPIO
+        mov r3, #1
+
+        cmp r4, #32
+        subge r4,r4, #32
+        addge r5,r5, #0x044 @GPEDS1
+        addlt r5,r5, #0x040 @GPEDS0
+        lsl r3, r3, r4
+
+        swi 0x16
+        ldr r5, [r5] @accedemos al contenido del registro
+        and r3, r5, r3
+        lsr r3,r3, r4 @desplazamos valor recogido al bit 0
+        swi 0x7C
+
+        mov r0, r3 @ retornamos valor en r0
+        ldmia sp!, {r4,r5,pc}
+
+
+clearEv_gpio:
+        stmdb sp!, {r4,r5,lr}
+        mov r4, r0
+        ldr r5, =GPDIR
+        ldr r5, [r5]
+        mov r3, #1
+
+        cmp r4, #32
+        subge r4,r4, #32
+        addge r5,r5, #0x044 @GPEDS1
+        addlt r5,r5, #0x040 @GPEDS0
+        lsl r3,r3, r4
+
+        swi 0x16
+        str r3, [r5] @anulamos el aviso de evento
+        swi 0x7C
+        ldmia sp!, {r4,r5, pc}
+

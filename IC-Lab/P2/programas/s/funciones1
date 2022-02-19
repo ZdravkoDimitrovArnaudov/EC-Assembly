@@ -1,0 +1,155 @@
+.data
+opcion1: .asciz "1. Juega una partida.\n"
+opcion2: .asciz "2. Salir.\n"
+opcion: .asciz "Escoge una opcion:\n"
+turno: .asciz "Escoge una letra:\n"
+.text
+.globl menu
+.globl comprueba
+.globl inicializa_palabras
+.globl muestra_turno
+.globl selecciona_palabra
+.globl estado
+.extern random
+menu:
+
+          ldr r0, =opcion1
+          swi 0x02
+          ldr r0, =opcion2
+          swi 0x02
+          ldr r0, =opcion
+          swi 0x02
+          mov r0, #'\n' @salto de linea'
+          swi 0x00
+          mov pc,lr
+
+muestra_turno:
+          @en R0 tenemos la direccion de la palabra oculta. No salvamos nada porque no nos hace falta.
+          mov r1, r0
+
+          @pedimos al jugador que juegue su turno y mostramos palabra oculta
+           ldr r0, =turno
+           swi 0x02
+           mov r0, #'\n' @salto adicional de linea
+           swi 0x00
+
+           mov r0, r1 @recuperamos direccion de palabra oculta
+           swi 0x02
+           mov r0, #'\n'
+           swi 0x00
+           mov pc, lr
+
+
+
+comprueba:
+           stmdb sp!, {r4,r5,lr}
+           @Debemos comparar el caracter con todas las letras. Si ha habido acierto, escribimos en la palabra oculta y lo anotamos. Si no coincide ninguna o ya habiamos escogido dicho caracter anteriormente, lo consideramos como fallo.
+           @No necesitamos salvar registros, las direcciones y el caracter pulsado son parametros
+           @ R0: letra escogida usuario
+           @ R1: posicion memoria palabra
+           @ R2: posicion memoria oculta
+           mov r3, #0 @booleano para saber si hubo acierto o no
+           ldrb r4, [r1] @leemos caracter para inicializar
+
+COMPARA:
+           cmp r4, #0 @hasta final de string
+           beq FIN_COMPARA
+
+           cmp r0, r4 @comparamos la el caracter con cada letra de la palabra
+           beq COINCIDE
+
+ACTUALIZA:
+           add r1, r1, #1
+           add r2, r2, #1
+           ldrb r4, [r1] @nueva letra
+           b COMPARA
+
+
+COINCIDE:
+           @la letra puede estar ya seleccionada
+           ldrb r5, [r2]
+           cmp r0, r5
+           beq  ACTUALIZA
+
+           strb r0, [r2] @en caso de ser un nuevo acierto, revelamos caracter de palabra oculta y anotamos acierto
+           mov r3, #1 @hay acierto
+           b ACTUALIZA
+
+
+FIN_COMPARA:
+           mov r0, r3 @retornamos en el codigo si hubo acierto o no
+           ldmia sp!, {r4,r5,pc}
+
+
+
+inicializa_palabras:
+
+           stmdb sp!, {r4-r5,lr}
+           @direccion de la palabra escogida en R0.
+           @puntero a la variable que almacena la palabra en R1.
+           @puntero a la variable que almacena la oculta en R2.
+           @no salvamos los registros puesto que no nos hace falta.
+
+           ldrb r4, [r0] @inicializo registro
+           mov r5, #0x2D @ocultamos los caracteres de la palabra
+
+INICIALIZA:
+
+           cmp r4, #0 @hasta final de cadena
+           beq FIN_INICIALIZA
+
+           strb r4, [r1] @escribimos caracter en variable PALABRA
+           strb r5, [r2] @escribimos '-' en variable OCULTA
+
+           @actualizamos
+           add r1, r1, #1 @siguiente posicion palabra
+           add r2, r2, #1 @siguiente posicion oculta
+           add r0, r0, #1 @avanzamos con la palabra
+           ldrb r4, [r0] @leemos siguiente caracter
+           b INICIALIZA
+
+FIN_INICIALIZA:
+           ldmia sp!, {r4-r5,pc}
+
+
+
+selecciona_palabra:
+           stmdb sp!, {r4,r5,lr}
+
+           mov r4, r1 @direccion de memoria de la estructura PALABRAS
+           mov r5, r2 @offset de cada palabra
+
+           @toma como argumento r0, la cota maxima de palabras y devuelve un indice en r0 tambien
+           bl RANDOM
+
+           mul r5, r0, r5 @desplazamiento = indicePalabra x offset
+           add r4, r4, r5
+           mov r0, r4 @retornamos la direccion de la palabra en R0
+
+           ldmia sp!, {r4,r5,pc}
+
+estado:
+           @comprobamos el estado de la palabra oculta. Si en el string no quedan signos ocultos, la palabra estara adivinada.
+           @En r0 tenemos la direccion de la cadena en cuestion.
+
+           mov r2, #0 @para saber si hay signo o no
+           ldrb r1, [r0]
+ESTADO_OCULTA:
+           cmp r1, #0 @hasta final de cadena
+           beq FIN_ESTADO
+
+           cmp r1, #0x2D @si hay un signo, finaliza
+           addeq r2, r2, #1
+           beq FIN_ESTADO
+
+           add r0, r0, #1
+           ldrb r1, [r0] @nuevo caracter
+           b ESTADO_OCULTA
+
+FIN_ESTADO:
+           @devolvemos 1 si la palabra esta adivinada, 0 en caso contrario
+           cmp r2, #1
+           movne r0, #1 @si se ha adivinado
+           moveq r0, #0
+           mov pc, lr
+

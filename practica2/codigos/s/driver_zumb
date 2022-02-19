@@ -1,0 +1,61 @@
+.data
+.equ FREC, 900
+.text
+.extern driver_gpio
+
+.globl gen_tono
+.globl delay
+
+gen_tono:
+         stmdb sp!, {r4,r5,r6,lr}
+         @salvamos los registros
+         mov r4, r0 @perido de nota
+         mov r5, r1 @Numero de veces que se reitera el perioro(frecuencia)
+
+         @calulamos la longitud del delay
+         mov r1, #FREC
+         mul r1, r4, r1
+         lsr r1, r1, #2 @dividimos entre 4
+         mov r6, r1 @salvamos numero de cilcos para delay
+         mov r4, #0 @contador para la senal cuadrada
+
+         @para producir una senal cuadrada, hemos de repetir el periodo un numero de veces con tal de que se produzca la nota.
+
+WHILE:
+         cmp r4, r5
+         beq F_WHILE
+
+         @encendemos
+         mov r0, #4 @terminal zumbador
+         mov r1, #1 @encedemos
+         bl valor_gpio
+
+         mov r0, r6 @retardo
+         bl delay
+
+         @apagamos
+         mov r0, #4 @terminal zumbador
+         mov r1, #0 @encedemos
+         bl valor_gpio
+
+          mov r0, r6 @retardo
+         bl delay
+
+         add r4,r4,#1 @actualizamos contador
+         b WHILE
+
+
+
+
+
+F_WHILE:  ldmia sp!, {r4,r5,r6,pc}
+
+
+
+
+delay:     stmdb sp!, {lr}
+
+BUCLE:     subs r0, r0, #1
+           bne BUCLE
+
+           ldmia sp!, {pc}

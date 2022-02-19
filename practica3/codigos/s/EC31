@@ -1,0 +1,33 @@
+.data
+.equ RETARDO, 4000000000
+inicia_contador: .asciz "Se inicia bucle de espera y se lee contador.\n"
+finaliza_contador: .asciz "Ha finalizado el bucle de espera, se lee el contador y se devuelve por pantalla.\n"
+.globl _start
+.extern d_timer
+_start:
+
+       bl ini_Timer @inicilizamos timer
+
+       ldr r0, =inicia_contador
+       swi 0x02
+
+       bl timer_Act
+       mov r4, r0 @parte baja
+
+       @bucle de espera cuyo tiempo ha de tantearse a fallo y error
+       ldr r0, =RETARDO
+delay: subs r0,r0, #1
+       bne delay
+
+       ldr r0, =finaliza_contador
+       swi 0x02
+
+       bl timer_Act
+       @estudiamos contador
+       sub r0, r0, r4
+
+       bl print_integer
+
+       swi 0x11
+
+

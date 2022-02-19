@@ -1,0 +1,44 @@
+.data
+.equ CONVERT_INT, 0x30
+
+.text
+.globl read_integer
+.extern read_integer
+read_integer:
+              stmdb sp!, {lr}
+              mov r1, #0 @int cuenta = 0
+              mov r2, #0 @booleano = false
+              mov r3, #0x10 @multiplica cuenta
+
+              @determinamos primer caracter
+
+              swi 0x04
+              cmp r0, #0x0D @si es enter termina
+              beq fin
+              cmp r0, #0x2D @si es negativo booleano = true
+              bne numero
+              addeq r2 , r2 , #1
+              @comprobamos tambien si es numero.
+
+
+
+
+bucle:        swi 0x04
+numero:       cmp r0, #0x0D @si es enter termina
+              beq fin
+              cmp r0,#0x30
+              blt bucle
+              cmp r0, #0x39
+              bgt bucle
+              swi 0x00
+              sub r0, r0, #CONVERT_INT @convertimos a digito numerico
+              mul r1, r3, r1 @multiplicamos cuenta por 10.
+              add r1, r1, r0 @acumulamos numero en posicion adecuada.
+              b bucle
+
+
+fin:          mov r0, r1 @trasladamos el valor de r1 en r0
+              mov r3, #0 @reutilizamos variable en caso de numero negativo
+              cmp r2, #1 @si el booleano es true
+              subeq r0, r3, r0 @convertir el numero en negativo: 0-numero
+              ldmia sp!, {pc}

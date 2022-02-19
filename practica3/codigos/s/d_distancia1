@@ -1,0 +1,122 @@
+.data
+LIM: .word 100000
+TIEMPO: .word 11246
+.text
+.extern driver_gpio
+.extern d_timer
+.globl Ini_dist
+.globl Mide_dist
+
+Ini_dist:
+
+         stmdb sp!, {lr}
+
+         @programamos la funcionalidad de los terminales.
+         @terminal Trig como salida
+         mov r0, #2
+         mov r1, #1
+         bl prog_gpio
+
+         @Echo como entrada
+         mov r0, #3
+         mov r1, #0
+         bl prog_gpio
+
+         ldmia sp!, {pc}
+
+Mide_dist:
+          stmdb sp!, {r4-r6,lr}
+
+          mov r4, #19 @tiempo de senhal Trig activa en microsegundos
+          bl ini_Timer @inicializamos timer
+
+          mov r0, #2 @activamos Trig
+          mov r1, #1
+          bl valor_gpio
+
+          @determinamos tiempo de espera para el bucle
+          bl timer_Act
+          add r4, r0, r4 @contador timer +19
+
+WHILE1:   bl timer_Act
+          cmp r0, r4
+          blt WHILE1
+
+
+          mov r0, #2 @valor de salida 0 en terminal Trig
+          mov r1, #0
+          bl valor_gpio
+
+          ldr r6, =LIM
+          ldr r6, [r6] @cargamos el numero maximo de iteraciones hasta error
+
+          mov r5, #0 @inicializamos contador
+
+          mov r0, #3
+          bl leeValor_gpio
+
+WHILE2:   cmp r0, #1
+          beq F_WHILE2
+
+          cmp r5, r6
+          beq ERROR
+
+          mov r0, #3
+          bl leeValor_gpio
+
+          add r5,r5, #1
+          B WHILE2
+
+F_WHILE2:
+
+          bl timer_Act
+          mov r4, r0 @ salvamos valor de contador con el cambio de senhal Echo.
+
+          mov r0, #3
+          bl leeValor_gpio @leemos Echo hasta que se produczca cambio de senhal
+
+
+WHILE3:
+          cmp r0, #0
+          beq F_WHILE3
+
+          mov r0, #3
+          bl leeValor_gpio
+          b WHILE3
+
+F_WHILE3:
+
+          bl timer_Act
+          sub r0, r0, r4 @guardamos la diferencia de los contadores, siendo el tiempo que tarda el dispositvo en enviar la senhal al objeto y recibirla de vuelta.
+
+          ldr r1, =TIEMPO
+          ldr r1, [r1]
+          mul r0, r1, r0
+          lsr r0,#16
+          b TERMINAR
+
+
+
+ERROR:
+
+           @devolvemos en el reg1 un 1 y en reg0 un 0 para indicar que hubo error
+           mov r0, #0
+           mov r1, #1
+           b TERMINAR
+
+
+
+TERMINAR:
+
+           mov r1, #0
+           ldmia sp!, {r4-r6,pc}
+
+
+
+
+
+
+
+
+
+

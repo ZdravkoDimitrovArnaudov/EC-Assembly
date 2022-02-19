@@ -1,0 +1,4 @@
+
+@@ Constantes para el manejo del listado de palabras de 6 caracteres
+.equ NUM_PALABRAS, 900
+.equ OFF_PALABRA, 7
